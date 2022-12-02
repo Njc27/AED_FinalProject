@@ -6,7 +6,7 @@ package Organization;
 
 /**
  *
- * @author Prathyusha
+ * @author namithajc
  */
 public class CommunityEnterprise {
     
