@@ -39,5 +39,11 @@ public class Hospital {
     public void setTherapistDirectory(TherapistDirectory therapistDirectory) {
         this.therapistDirectory = therapistDirectory;
     }
+
+    @Override
+    public String toString() {
+        return "Hospital{" + "hospName=" + hospName + ", doctorDirectory=" + doctorDirectory + ", therapistDirectory=" + therapistDirectory + '}';
+    }
+    
     
 }

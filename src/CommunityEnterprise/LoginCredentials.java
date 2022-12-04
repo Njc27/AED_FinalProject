@@ -27,6 +27,19 @@ public class LoginCredentials {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    @Override
+    public String toString() {
+        return "LoginCredentials{" + "userName=" + userName + ", password=" + password + '}';
+    }
+
+    public LoginCredentials(String userName, String password) {
+        this.userName = userName;
+        this.password = password;
+    }
+
+    public LoginCredentials() {
+    }
     
     
 }

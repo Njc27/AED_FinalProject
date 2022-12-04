@@ -10,9 +10,9 @@ import java.util.ArrayList;
  *
  * @author namithajc
  */
-public class Community extends PeopleDirectory{
+public class Community {
     String name;
-    HospitalDirectory hospitalDirectory;
+
 
     public String getName() {
         return name;
@@ -22,21 +22,10 @@ public class Community extends PeopleDirectory{
         this.name = name;
     }
 
-    public HospitalDirectory getHospitalDirectory() {
-        return hospitalDirectory;
-    }
-
-    public void setHospitalDirectory(HospitalDirectory hospitalDirectory) {
-        this.hospitalDirectory = hospitalDirectory;
-    }
-
-    public ArrayList<People> getPeopleList() {
-        return peopleList;
-    }
-
-    public void setPeopleList(ArrayList<People> peopleList) {
-        this.peopleList = peopleList;
+    @Override
+    public String toString() {
+        return "Community{" + "name=" + name + '}';
     }
     
-    
+
 }

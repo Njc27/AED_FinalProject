@@ -2,6 +2,8 @@ package DBConn;
 
 //import Business.ConfigureASystem;
 //import Business.EcoSystem;
+import Business.ConfigureASystem;
+import Business.Organization;
 import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;
 import com.db4o.ObjectSet;
@@ -52,24 +54,24 @@ public class DB4OUtil {
         return null;
     }
 
-//    public synchronized void storeSystem(EcoSystem system) {
-//        ObjectContainer conn = createConnection();
-//        conn.store(system);
-//        conn.commit();
-//        conn.close();
-//    }
+    public synchronized void storeSystem(Organization system) {
+        ObjectContainer conn = createConnection();
+        conn.store(system);
+        conn.commit();
+        conn.close();
+    }
     
-//    public EcoSystem retrieveSystem(){
-//        ObjectContainer conn = createConnection();
-//        ObjectSet<EcoSystem> systems = conn.query(EcoSystem.class); // Change to the object you want to save
-//        EcoSystem system;
-//        if (systems.size() == 0){
-//            system = ConfigureASystem.configure();  // If there's no System in the record, create a new one
-//        }
-//        else{
-//            system = systems.get(systems.size() - 1);
-//        }
-//        conn.close();
-//        return system;
-//    }
+    public Organization retrieveSystem(){
+        ObjectContainer conn = createConnection();
+        ObjectSet<Organization> systems = conn.query(Organization.class); // Change to the object you want to save
+        Organization system;
+        if (systems.size() == 0){
+            system = ConfigureASystem.initialize();  // If there's no System in the record, create a new one
+        }
+        else{
+            system = systems.get(systems.size() - 1);
+        }
+        conn.close();
+        return system;
+    }
 }

@@ -4,12 +4,13 @@
  */
 package EmergencyEnterprise;
 
-import CommunityEnterprise.People;
+import CommunityEnterprise.PeopleDirectory;
 
 /**
  *
  * @author namithajc
  */
-public class Ambulance extends People{
+public class Ambulance extends PeopleDirectory{
+       
     
 }

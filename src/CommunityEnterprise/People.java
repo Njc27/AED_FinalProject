@@ -24,6 +24,7 @@ public class People extends LoginCredentials{
     boolean communityAdmin;
     boolean hospitalAdmin;
     boolean emergencyAdmin;
+    LoginCredentials loginCredentials;
 
     public String getSsn() {
         return ssn;
@@ -32,6 +33,7 @@ public class People extends LoginCredentials{
     public void setSsn(String ssn) {
         this.ssn = ssn;
     }
+    
     
     
 
@@ -154,4 +156,36 @@ public class People extends LoginCredentials{
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public People(String ssn, String firstName, String lastName, String emailId, String phoneNo, String addressLine1, String addressLine2, String community, String city, String zipCode, boolean systemAdmin, boolean communityAdmin, boolean hospitalAdmin, boolean emergencyAdmin, LoginCredentials loginCredentials) {
+        this.ssn = ssn;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.emailId = emailId;
+        this.phoneNo = phoneNo;
+        this.addressLine1 = addressLine1;
+        this.addressLine2 = addressLine2;
+        this.community = community;
+        this.city = city;
+        this.zipCode = zipCode;
+        this.systemAdmin = systemAdmin;
+        this.communityAdmin = communityAdmin;
+        this.hospitalAdmin = hospitalAdmin;
+        this.emergencyAdmin = emergencyAdmin;
+        this.loginCredentials = loginCredentials;
+    }
+
+    
+
+    public People() {
+    }
+
+    @Override
+    public String toString() {
+        return "People{" + "ssn=" + ssn + ", firstName=" + firstName + ", lastName=" + lastName + ", emailId=" + emailId + ", phoneNo=" + phoneNo + ", addressLine1=" + addressLine1 + ", addressLine2=" + addressLine2 + ", community=" + community + ", city=" + city + ", zipCode=" + zipCode + ", systemAdmin=" + systemAdmin + ", communityAdmin=" + communityAdmin + ", hospitalAdmin=" + hospitalAdmin + ", emergencyAdmin=" + emergencyAdmin + ", loginCredentials=" + loginCredentials + '}';
+    }
+    
+
+  
+    
 }
