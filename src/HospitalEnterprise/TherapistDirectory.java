@@ -6,7 +6,7 @@ package HospitalEnterprise;
 
 /**
  *
- * @author Prathyusha
+ * @author namithajc
  */
 public class TherapistDirectory extends Therapist{
     
