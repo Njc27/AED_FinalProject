@@ -5,7 +5,7 @@
 package Business;
 
 import CommunityEnterprise.CommunityDirectory;
-import CommunityEnterprise.HospitalDirectory;
+import HospitalEnterprise.HospitalDirectory;
 import CommunityEnterprise.PeopleDirectory;
 
 /**
