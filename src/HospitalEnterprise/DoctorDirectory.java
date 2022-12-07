@@ -4,10 +4,18 @@
  */
 package HospitalEnterprise;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author Prathyusha
+ * @author namithajc
  */
 public class DoctorDirectory  extends Doctor{
+    ArrayList<Doctor> doctorList;
+
+    public DoctorDirectory() {
+        doctorList = new ArrayList();
+    }
+    
     
 }
