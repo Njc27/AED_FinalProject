@@ -141,21 +141,15 @@ public class People extends LoginCredentials{
         this.emergencyAdmin = emergencyAdmin;
     }
 
-    public String getUserName() {
-        return userName;
+    public LoginCredentials getLoginCredentials() {
+        return loginCredentials;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setLoginCredentials(LoginCredentials loginCredentials) {
+        this.loginCredentials = loginCredentials;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
+    
 
     public People(String ssn, String firstName, String lastName, String emailId, String phoneNo, String addressLine1, String addressLine2, String community, String city, String zipCode, boolean systemAdmin, boolean communityAdmin, boolean hospitalAdmin, boolean emergencyAdmin, LoginCredentials loginCredentials) {
         this.ssn = ssn;

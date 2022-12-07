@@ -22,12 +22,38 @@ public class CommunityDirectory extends Community{
         communityList = new ArrayList();
     }
     
+    public boolean checkCommunity(String communityName){
+        for(int i =0;i<communityList.size();i++){
+            if(communityName.equalsIgnoreCase(communityList.get(i).getName())){
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public Community getCommunityByName(String communityName){
+        for(int i =0;i<communityList.size();i++){
+            if(communityName.equalsIgnoreCase(communityList.get(i).getName())){
+                return communityList.get(i);
+            }
+        }
+        return null;
+    }
     public void addCommunity(Community c){
         communityList.add(c);
     }
     public void removeCommunity(Community c){
         communityList.remove(c);
     }
+
+    public ArrayList<Community> getCommunityList() {
+        return communityList;
+    }
+
+    public void setCommunityList(ArrayList<Community> communityList) {
+        this.communityList = communityList;
+    }
+    
 
     @Override
     public String toString() {
