@@ -5,7 +5,11 @@
 package ui;
 
 import Business.Organization;
+import UserInterface.Hopsital.HospJPanel;
+import UserInterface.Hopsital.HospitalJFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JSplitPane;
 
 /**
  *
@@ -16,11 +20,15 @@ public class Login extends javax.swing.JFrame {
     /**
      * Creates new form Login2
      */
+    JSplitPane jSplitPane1;
+    JPanel jpanel2;
     Organization system;
     HomePage home; 
-    public Login( Organization system,HomePage home) {
+    public Login(Organization system,HomePage home) {
         initComponents();
         this.system = system;
+        this.jSplitPane1=jSplitPane1;
+        this.jpanel2=jpanel2;
         this.home = home;
     }
 
@@ -66,6 +74,11 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setText("Login As:");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "System Admin", "Hospital Admin", "Doctor", "Therapist", "Insurance Admin", "Finance Admin", "Emergency Admin" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Username:");
 
@@ -95,7 +108,7 @@ public class Login extends javax.swing.JFrame {
                                 .addComponent(jLabel2)
                                 .addGap(18, 18, 18)
                                 .addComponent(jUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 281, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 273, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(51, 51, 51))
         );
@@ -148,13 +161,33 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        SystemAdmin sysAdmin= new SystemAdmin(system);
+      
+        String selectedType = (String) jComboBox1.getSelectedItem();
         String username = jUsername.getText();
         String password = jPassword.getText();
+        if(selectedType.equalsIgnoreCase("System Admin")){
+        SystemAdmin sysAdmin= new SystemAdmin(system);
         if(username.trim().length() > 0 && password.trim().length()>0){
             if(system.getPeopleDirectory().validateUserNameAndPassword(username, password) == true){
                 this.setVisible(false);
                 sysAdmin.setVisible(true);
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "Invalid Username and Password");
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "Please Enter Username and Password");
+        }
+        }
+        
+        if(selectedType.equalsIgnoreCase("Hospital Admin")){
+        HospitalJFrame hospAdmin= new HospitalJFrame(system);
+        if(username.trim().length() > 0 && password.trim().length()>0){
+            if(system.getPeopleDirectory().validateUserNameAndPassword(username, password) == true){
+                this.setVisible(false);
+                hospAdmin.setVisible(true);
+                //jSplitPane1.setRightComponent(hospAdmin);
             }
             else{
                 JOptionPane.showMessageDialog(this, "Invalid Username and Password");
@@ -164,7 +197,14 @@ public class Login extends javax.swing.JFrame {
         else{
             JOptionPane.showMessageDialog(this, "Please Enter Username and Password");
         }
+        }
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
      * @param args the command line arguments
