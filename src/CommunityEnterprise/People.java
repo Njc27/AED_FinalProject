@@ -24,6 +24,7 @@ public class People extends LoginCredentials{
     boolean communityAdmin;
     boolean hospitalAdmin;
     boolean emergencyAdmin;
+    boolean insuranceAdmin;
     LoginCredentials loginCredentials;
 
     public String getSsn() {
@@ -166,7 +167,9 @@ public class People extends LoginCredentials{
         this.communityAdmin = communityAdmin;
         this.hospitalAdmin = hospitalAdmin;
         this.emergencyAdmin = emergencyAdmin;
+        this.insuranceAdmin = insuranceAdmin;
         this.loginCredentials = loginCredentials;
+        
     }
 
     
