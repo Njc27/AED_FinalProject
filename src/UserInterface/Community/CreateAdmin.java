@@ -370,7 +370,7 @@ public class CreateAdmin extends javax.swing.JPanel {
             }
         }
         else {
-                            JOptionPane.showMessageDialog(this, "Please Enter the SSN");
+               JOptionPane.showMessageDialog(this, "Please Enter the SSN");
 
         }
     }//GEN-LAST:event_jButton1ActionPerformed

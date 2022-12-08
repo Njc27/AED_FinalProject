@@ -182,16 +182,17 @@ public class HospitalJFrame extends javax.swing.JFrame {
         //        frame.setLayout(new BorderLayout());
         //        Component HospitalsJPanel = null;
         //        frame.add(HospitalsJPanel, BorderLayout.CENTER);
-//        ManageHospitalsJPanel adminPanel = new ManageHospitalsJPanel();
-//        jSplitPane1.setRightComponent(adminPanel);
+        ManageHospitalsJPanel adminPanel = new ManageHospitalsJPanel();
+        jSplitPane1.setRightComponent(adminPanel);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        ManageHospitalsJPanel adminPanel = new ManageHospitalsJPanel();
-        jSplitPane1.setRightComponent(adminPanel);
-//        ManageHospitals adminPanel = new ManageHospitals();
+        DoctorJPanel docJPanel = new DoctorJPanel();
+        jSplitPane1.setRightComponent(docJPanel);
+//        ManageHospitalsJPanel adminPanel = new ManageHospitalsJPanel();
 //        jSplitPane1.setRightComponent(adminPanel);
+
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
