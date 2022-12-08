@@ -35,6 +35,25 @@ public class PeopleDirectory extends People{
     public void removePerson(People p){
         peopleList.remove(p);
     }
+    
+    public ArrayList<People> systemAdminList(){
+        ArrayList<People> systemAdminList = new ArrayList();
+        for(int i = 0;i < peopleList.size();i++){
+            if(peopleList.get(i).isSystemAdmin()){
+                systemAdminList.add(peopleList.get(i));
+            }
+        }
+        return systemAdminList;
+    }
+    
+    public People findPersonBySSn(String ssn){
+        for(int i = 0;i < peopleList.size();i++){
+            if(peopleList.get(i).getSsn().equalsIgnoreCase(ssn)){
+                return peopleList.get(i);
+            }
+        }
+        return null;
+    }
     public boolean validateUserNameAndPassword(String username, String password){
         for(int i = 0 ;i < peopleList.size();i++){
             if(peopleList.get(i).loginCredentials.getUserName().equalsIgnoreCase(username) && peopleList.get(i).loginCredentials.getPassword().equalsIgnoreCase(password)){

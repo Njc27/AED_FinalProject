@@ -6,7 +6,7 @@ package HospitalEnterprise;
 
 /**
  *
- * @author namithajc
+ * @author namitahjc
  */
 public class Patient {
     

@@ -12,6 +12,7 @@ import java.util.ArrayList;
  */
 public class Community {
     String name;
+    String city;
 
 
     public String getName() {
@@ -22,9 +23,17 @@ public class Community {
         this.name = name;
     }
 
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
     @Override
     public String toString() {
-        return "Community{" + "name=" + name + '}';
+        return "Community{" + "name=" + name + "city=" + city +'}';
     }
     
 
