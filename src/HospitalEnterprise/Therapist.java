@@ -10,4 +10,5 @@ package HospitalEnterprise;
  */
 public class Therapist {
     
+    
 }
