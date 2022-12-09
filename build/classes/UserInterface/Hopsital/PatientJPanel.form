@@ -43,7 +43,7 @@
     <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="260" width="-1" height="-1"/>
+          <AbsoluteConstraints x="0" y="252" width="800" height="1420"/>
         </Constraint>
       </Constraints>
 
@@ -70,7 +70,7 @@
                           <Component id="jLPatDob" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jPanel2" min="-2" pref="800" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="12" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -82,7 +82,7 @@
                       <Component id="jPatientName" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
                       <Component id="jLPatDob" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="699" max="32767" attributes="0"/>
+                      <EmptySpace pref="707" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -559,6 +559,13 @@
                     </Constraint>
                   </Constraints>
                 </Component>
+                <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser1">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="100" y="110" width="160" height="-1"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
               </SubComponents>
             </Container>
           </SubComponents>
@@ -575,7 +582,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane1" alignment="0" pref="812" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" alignment="0" pref="800" max="32767" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="jButton1" min="-2" max="-2" attributes="0"/>
@@ -590,7 +597,7 @@
                       <Component id="jScrollPane1" min="-2" pref="266" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="1054" max="32767" attributes="0"/>
+                      <EmptySpace pref="1076" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

@@ -26,7 +26,6 @@ public class DoctorJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -73,9 +72,6 @@ public class DoctorJPanel extends javax.swing.JPanel {
         jComboBox1 = new javax.swing.JComboBox<>();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setText("HelpCare");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(365, 25, -1, -1));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -148,7 +144,7 @@ public class DoctorJPanel extends javax.swing.JPanel {
         jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 229, -1, -1));
 
         jLabel20.setText("Emergency Contact");
-        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(617, 86, -1, -1));
+        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 90, -1, -1));
         jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(672, 121, 76, -1));
         jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(672, 156, 76, -1));
         jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(672, 226, 76, -1));
@@ -228,7 +224,7 @@ public class DoctorJPanel extends javax.swing.JPanel {
                 jComboBox1ActionPerformed(evt);
             }
         });
-        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 73, 100, -1));
+        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 70, 100, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
@@ -253,7 +249,6 @@ public class DoctorJPanel extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> jDoctorSpec;
     private javax.swing.JComboBox<String> jDoctorSpec1;
     private javax.swing.JComboBox<String> jDoctorSpec2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;

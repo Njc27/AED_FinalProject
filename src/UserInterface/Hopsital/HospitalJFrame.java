@@ -33,7 +33,7 @@ public class HospitalJFrame extends javax.swing.JFrame {
    // JSplitPane jSplitPane2;
     public HospitalJFrame(Organization system) {
         initComponents();
-        this.system = system;
+       this.system = system;
        this.jSplitPane1 = jSplitPane1;
     }
 
