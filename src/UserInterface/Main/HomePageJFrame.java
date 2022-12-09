@@ -7,6 +7,7 @@ package UserInterface.Main;
 import Business.ConfigureASystem;
 import Business.Organization;
 import DBConn.DB4OUtil;
+import UserInterface.Hopsital.PatientRegistrationJPanel;
 import com.formdev.flatlaf.FlatLightLaf;
 import javax.swing.UIManager;
 
@@ -20,6 +21,7 @@ public class HomePageJFrame extends javax.swing.JFrame {
      * Creates new form HomePageJFrame
      */
     Organization system;
+    boolean isView;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
     public HomePageJFrame() {
         initComponents();
@@ -202,7 +204,10 @@ public class HomePageJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        
         // TODO add your handling code here:
+        PatientRegistrationJPanel patientPanel = new PatientRegistrationJPanel(system,jSplitPane1,isView);
+        jSplitPane1.setRightComponent(patientPanel);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

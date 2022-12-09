@@ -7,6 +7,7 @@ package Business;
 import CommunityEnterprise.CityDirectory;
 import HospitalEnterprise.HospitalDirectory;
 import CommunityEnterprise.PeopleDirectory;
+import HospitalEnterprise.PatientDirectory;
 
 /**
  *
@@ -16,6 +17,7 @@ public class Organization {
     CityDirectory cityDirectory;
     PeopleDirectory peopleDirectory;
     HospitalDirectory hospitalDirectory;
+    PatientDirectory patientDirectory;
 
     public Organization() {
         cityDirectory = new CityDirectory();
@@ -45,8 +47,15 @@ public class Organization {
     public void setHospitalDirectory(HospitalDirectory hospitalDirectory) {
         this.hospitalDirectory = hospitalDirectory;
     }
-    
 
+    public PatientDirectory getPatientDirectory() {
+        return patientDirectory;
+    }
+
+    public void setPatientDirectory(PatientDirectory patientDirectory) {
+        this.patientDirectory = patientDirectory;
+    }
+    
     @Override
     public String toString() {
         return "Organization{" + "commDirectory=" + cityDirectory + ", hospDirectory=" + ", peopleDirectory=" + peopleDirectory + '}';

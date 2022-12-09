@@ -42,7 +42,7 @@ public class LoginCredentials {
         return "LoginCredentials{" + "userName=" + userName + ", password=" + password + '}';
     }
 
-    public LoginCredentials(String userName, String password) {
+    public LoginCredentials(String userName, String password, String email) {
         this.userName = userName;
         this.password = password;
         this.email = email;

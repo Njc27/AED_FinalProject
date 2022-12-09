@@ -12,7 +12,7 @@ import java.util.ArrayList;
  *
  * @author namithajc
  */
-public class HospitalDirectory {
+public class HospitalDirectory extends Hospital{
     ArrayList<Hospital> hospList;
 
     public HospitalDirectory(ArrayList<Hospital> hospList) {
