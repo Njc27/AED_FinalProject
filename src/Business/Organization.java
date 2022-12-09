@@ -4,7 +4,7 @@
  */
 package Business;
 
-import CommunityEnterprise.CommunityDirectory;
+import CommunityEnterprise.CityDirectory;
 import HospitalEnterprise.HospitalDirectory;
 import CommunityEnterprise.PeopleDirectory;
 
@@ -13,31 +13,21 @@ import CommunityEnterprise.PeopleDirectory;
  * @author namithajc
  */
 public class Organization {
-    
-    CommunityDirectory commDirectory;
-    HospitalDirectory hospDirectory;
+    CityDirectory cityDirectory;
     PeopleDirectory peopleDirectory;
+    HospitalDirectory hospitalDirectory;
 
     public Organization() {
-        commDirectory = new CommunityDirectory();
-        hospDirectory = new HospitalDirectory();
+        cityDirectory = new CityDirectory();
     }
    
 
-    public CommunityDirectory getCommDirectory() {
-        return commDirectory;
+    public CityDirectory getCityDirectory() {
+        return cityDirectory;
     }
 
-    public void setCommDirectory(CommunityDirectory commDirectory) {
-        this.commDirectory = commDirectory;
-    }
-
-    public HospitalDirectory getHospDirectory() {
-        return hospDirectory;
-    }
-
-    public void setHospDirectory(HospitalDirectory hospDirectory) {
-        this.hospDirectory = hospDirectory;
+    public void setCityDirectory(CityDirectory cityDirectory) {
+        this.cityDirectory = cityDirectory;
     }
 
     public PeopleDirectory getPeopleDirectory() {
@@ -48,9 +38,18 @@ public class Organization {
         this.peopleDirectory = peopleDirectory;
     }
 
+    public HospitalDirectory getHospitalDirectory() {
+        return hospitalDirectory;
+    }
+
+    public void setHospitalDirectory(HospitalDirectory hospitalDirectory) {
+        this.hospitalDirectory = hospitalDirectory;
+    }
+    
+
     @Override
     public String toString() {
-        return "Organization{" + "commDirectory=" + commDirectory + ", hospDirectory=" + hospDirectory + ", peopleDirectory=" + peopleDirectory + '}';
+        return "Organization{" + "commDirectory=" + cityDirectory + ", hospDirectory=" + ", peopleDirectory=" + peopleDirectory + '}';
     }
     
 

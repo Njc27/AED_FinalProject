@@ -54,6 +54,14 @@ public class PeopleDirectory extends People{
         }
         return null;
     }
+    public boolean checkPersonByFirstAndLastName(String FirstName,String LastName){
+        for(int i = 0;i < peopleList.size();i++){
+            if(peopleList.get(i).getFirstName().equalsIgnoreCase(firstName) && peopleList.get(i).getLastName().equalsIgnoreCase(lastName)){
+                return true;
+            }
+        }
+        return false;
+    }
     public boolean validateUserNameAndPassword(String username, String password){
         for(int i = 0 ;i < peopleList.size();i++){
             if(peopleList.get(i).loginCredentials.getUserName().equalsIgnoreCase(username) && peopleList.get(i).loginCredentials.getPassword().equalsIgnoreCase(password)){

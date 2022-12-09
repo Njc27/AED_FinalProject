@@ -9,7 +9,6 @@ import javax.swing.JPanel;
 import javax.swing.JOptionPane;
 import javax.swing.JSplitPane;
 import UserInterface.Hopsital.HospitalJPanel;
-import UserInterface.Main.SystemAdmin;
 import UserInterface.Admin.SystemJPanel;
 
 /**

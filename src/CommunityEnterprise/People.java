@@ -4,6 +4,8 @@
  */
 package CommunityEnterprise;
 
+import java.util.Date;
+
 /**
  *
  * @author namithajc
@@ -20,11 +22,15 @@ public class People extends LoginCredentials{
     String community;
     String city;
     String zipCode;
+    Date dob;
+    String gender;
     boolean systemAdmin;
     boolean communityAdmin;
     boolean hospitalAdmin;
     boolean emergencyAdmin;
     boolean insuranceAdmin;
+    boolean doctor;
+    boolean therapist;
     LoginCredentials loginCredentials;
 
     public String getSsn() {
@@ -33,6 +39,14 @@ public class People extends LoginCredentials{
 
     public void setSsn(String ssn) {
         this.ssn = ssn;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
     
     
@@ -150,6 +164,31 @@ public class People extends LoginCredentials{
         this.loginCredentials = loginCredentials;
     }
 
+    public Date getDob() {
+        return dob;
+    }
+
+    public void setDob(Date dob) {
+        this.dob = dob;
+    }
+
+    public boolean isDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(boolean doctor) {
+        this.doctor = doctor;
+    }
+
+    public boolean isTherapist() {
+        return therapist;
+    }
+
+    public void setTherapist(boolean therapist) {
+        this.therapist = therapist;
+    }
+    
+    
     
 
     public People(String ssn, String firstName, String lastName, String emailId, String phoneNo, String addressLine1, String addressLine2, String community, String city, String zipCode, boolean systemAdmin, boolean communityAdmin, boolean hospitalAdmin, boolean emergencyAdmin, LoginCredentials loginCredentials) {

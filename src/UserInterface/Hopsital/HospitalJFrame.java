@@ -182,8 +182,8 @@ public class HospitalJFrame extends javax.swing.JFrame {
         //        frame.setLayout(new BorderLayout());
         //        Component HospitalsJPanel = null;
         //        frame.add(HospitalsJPanel, BorderLayout.CENTER);
-        ManageHospitalsJPanel adminPanel = new ManageHospitalsJPanel();
-        jSplitPane1.setRightComponent(adminPanel);
+//        ManageHospitalsJPanel adminPanel = new ManageHospitalsJPanel();
+//        jSplitPane1.setRightComponent(adminPanel);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

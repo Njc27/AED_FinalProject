@@ -14,8 +14,6 @@ import java.util.List;
  */
 public class City {
     private String cityName;
-    private String comName;
-    //String city;
     private CommunityDirectory comDir;
      
     public City() {

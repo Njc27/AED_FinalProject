@@ -47,7 +47,6 @@ public class PatientRegistrationJPanel extends javax.swing.JPanel {
         jLPatName = new javax.swing.JLabel();
         jLPatDob = new javax.swing.JLabel();
         jLPatAge = new javax.swing.JLabel();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
         jButton4 = new javax.swing.JButton();
         jcity = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
@@ -188,9 +187,6 @@ public class PatientRegistrationJPanel extends javax.swing.JPanel {
         jLPatAge.setText("Age:");
         add(jLPatAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 292, -1, -1));
 
-        jDateChooser2.setBackground(new java.awt.Color(247, 247, 255));
-        add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 245, 161, -1));
-
         jButton4.setFont(new java.awt.Font("Lava Kannada", 0, 14)); // NOI18N
         jButton4.setText("Register");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -299,7 +295,6 @@ public class PatientRegistrationJPanel extends javax.swing.JPanel {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jCommunity;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JTextField jId;
     private javax.swing.JLabel jLPatAge;
     private javax.swing.JLabel jLPatDob;

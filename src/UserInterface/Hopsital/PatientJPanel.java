@@ -31,7 +31,6 @@ public class PatientJPanel extends javax.swing.JPanel {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jPatientName = new javax.swing.JTextField();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
         jLPatDob = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLPatGender = new javax.swing.JLabel();
@@ -53,7 +52,6 @@ public class PatientJPanel extends javax.swing.JPanel {
         jLPatName1 = new javax.swing.JLabel();
         jLPatDob1 = new javax.swing.JLabel();
         jLPatAge = new javax.swing.JLabel();
-        jDateChooser3 = new com.toedter.calendar.JDateChooser();
         jButton4 = new javax.swing.JButton();
         jcity = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
@@ -82,8 +80,6 @@ public class PatientJPanel extends javax.swing.JPanel {
                 jPatientNameActionPerformed(evt);
             }
         });
-
-        jDateChooser2.setBackground(new java.awt.Color(247, 247, 255));
 
         jLPatDob.setBackground(new java.awt.Color(247, 247, 255));
         jLPatDob.setFont(new java.awt.Font("Lava Kannada", 0, 14)); // NOI18N
@@ -213,9 +209,6 @@ public class PatientJPanel extends javax.swing.JPanel {
         jLPatAge.setText("Age:");
         jPanel2.add(jLPatAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, -1, -1));
 
-        jDateChooser3.setBackground(new java.awt.Color(247, 247, 255));
-        jPanel2.add(jDateChooser3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 161, -1));
-
         jButton4.setFont(new java.awt.Font("Lava Kannada", 0, 14)); // NOI18N
         jButton4.setText("Edit");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -286,10 +279,7 @@ public class PatientJPanel extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(93, 93, 93)
                         .addComponent(jPatientName, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLPatDob)
-                        .addGap(6, 6, 6)
-                        .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLPatDob)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 12, Short.MAX_VALUE))
         );
@@ -300,10 +290,8 @@ public class PatientJPanel extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPatientName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLPatDob)
-                    .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(685, Short.MAX_VALUE))
+                .addComponent(jLPatDob)
+                .addContainerGap(699, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Add and Edit Patient ", jPanel1);
@@ -426,8 +414,6 @@ public class PatientJPanel extends javax.swing.JPanel {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JComboBox<String> jCommunity;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
-    private com.toedter.calendar.JDateChooser jDateChooser3;
     private javax.swing.JTextField jId1;
     private javax.swing.JLabel jLPatAge;
     private javax.swing.JLabel jLPatDob;

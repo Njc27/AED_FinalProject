@@ -12,9 +12,12 @@ import CommunityEnterprise.Community;
  */
 public class Hospital {
     String name;
-    Community community;
-    String city;
+    //String com;
+//    Community community;
+//    String city;
     int zipCode;
+    String email;
+    String phone;
     DoctorDirectory doctorDirectory;
     PatientDirectory patientDirectory;
     
@@ -23,10 +26,20 @@ public class Hospital {
          patientDirectory = new PatientDirectory();
     }
     
-    public Hospital(String name, Community community, String city, int zipCode, DoctorDirectory doctorDirectory, PatientDirectory patientDirectory) {
+//    public Hospital(String name, Community community, String city, int zipCode, DoctorDirectory doctorDirectory, PatientDirectory patientDirectory) {
+//        this.name = name;
+//        this.community = community;
+//        this.city = city;
+//        this.zipCode = zipCode;
+//        this.doctorDirectory = doctorDirectory;
+//        this.patientDirectory = patientDirectory;
+//    }
+    
+    public Hospital(String name,String com, String city, int zipCode, DoctorDirectory doctorDirectory, PatientDirectory patientDirectory) {
         this.name = name;
-        this.community = community;
-        this.city = city;
+//        this.com = com;
+//        //this.community = community;
+//        this.city = city;
         this.zipCode = zipCode;
         this.doctorDirectory = doctorDirectory;
         this.patientDirectory = patientDirectory;
@@ -39,22 +52,22 @@ public class Hospital {
     public void setName(String name) {
         this.name = name;
     }
-
-    public Community getCommunity() {
-        return community;
-    }
-
-    public void setCommunity(Community community) {
-        this.community = community;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
+//
+//    public Community getCommunity() {
+//        return community;
+//    }
+//
+//    public void setCommunity(Community community) {
+//        this.community = community;
+//    }
+//
+//    public String getCity() {
+//        return city;
+//    }
+//
+//    public void setCity(String city) {
+//        this.city = city;
+//    }
 
     public int getZipCode() {
         return zipCode;
@@ -63,6 +76,32 @@ public class Hospital {
     public void setZipCode(int zipCode) {
         this.zipCode = zipCode;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+//    public String getCom() {
+//        return com;
+//    }
+//
+//    public void setCom(String com) {
+//        this.com = com;
+//    }ß
+    
+    
 
     public DoctorDirectory getDoctorDirectory() {
         return doctorDirectory;
@@ -82,7 +121,7 @@ public class Hospital {
     
      @Override
     public String toString() {
-        return "Hospital{" + "hospitalName=" + name + ", Community=" + community + ", City=" + city + ", ZipCode=" + zipCode + ", doctorDirectory=" + doctorDirectory + ", patientDirectory=" + patientDirectory + '}';
+        return "Hospital{" + "hospitalName=" + name + ", ZipCode=" + zipCode + ", doctorDirectory=" + doctorDirectory + ", patientDirectory=" + patientDirectory + '}';
     }
      
 }

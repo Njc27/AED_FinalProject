@@ -317,11 +317,12 @@ public class CommunityAccess extends javax.swing.JPanel {
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(90, 90, 90)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(101, 101, 101)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(64, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -372,7 +373,7 @@ public class CommunityAccess extends javax.swing.JPanel {
         String city = jCity.getText();
         String zipCode = jZipCode.getText();
         String phoneNumber = jPhnNo.getText();
-        
+
         if(firstName.trim().length()>0 && lastName.trim().length()>0 && addLine1.trim().length()>0){
             People p = new People();
             p.setFirstName(firstName);
@@ -395,45 +396,45 @@ public class CommunityAccess extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPhnNoActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        String community = jTextField1.getText();
-        if(community.trim().length()==0){
-         JOptionPane.showMessageDialog(this, "Community Field Empty");   
-        }
-        else if(system.getCommDirectory().checkCommunity(community)){
-          JOptionPane.showMessageDialog(this, "Community Already Exists");  
-        }
-        else{
-            
-            Community comm = new Community();
-            comm.setName(community);
-            system.getCommDirectory().addCommunity(comm);
-            populateTable();
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-        int selectedRow = jTable1.getSelectedRow();
-        if(selectedRow == -1){
-            JOptionPane.showMessageDialog(this, "Please Select a Row");
-        }
-          else{
-          String community = (String) model.getValueAt(selectedRow,0);
-         Community c = system.getCommDirectory().getCommunityByName(community);
-         if(c!=null){
-             system.getCommDirectory().removeCommunity(c);
-             populateTable();
-         }
-         else{
-             JOptionPane.showMessageDialog(this, "Community might already be deleted");
-         }
-
-         }
-        
+        //        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        //        int selectedRow = jTable1.getSelectedRow();
+        //        if(selectedRow == -1){
+            //            JOptionPane.showMessageDialog(this, "Please Select a Row");
+            //        }
+        //          else{
+            //          String community = (String) model.getValueAt(selectedRow,0);
+            //         Community c = system.getCommDirectory().getCommunityByName(community);
+            //         if(c!=null){
+                //             system.getCommDirectory().removeCommunity(c);
+                //             populateTable();
+                //         }
+            //         else{
+                //             JOptionPane.showMessageDialog(this, "Community might already be deleted");
+                //         }
+            //
+            //         }
+        //
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        //        String community = jTextField1.getText();
+        //        if(community.trim().length()==0){
+            //         JOptionPane.showMessageDialog(this, "Community Field Empty");
+            //        }
+        //        else if(system.getCommDirectory().checkCommunity(community)){
+            //          JOptionPane.showMessageDialog(this, "Community Already Exists");
+            //        }
+        //        else{
+            //
+            //            Community comm = new Community();
+            //            comm.setName(community);
+            //            system.getCommDirectory().addCommunity(comm);
+            //            populateTable();
+            //        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     public void  populateTable(){
          DefaultTableModel model = (DefaultTableModel) jPeopleTable.getModel();
@@ -448,14 +449,13 @@ public class CommunityAccess extends javax.swing.JPanel {
                         rowData[4] = system.getPeopleDirectory().getPeopleList().get(i).getCommunity();
                         model.addRow(rowData);
         }
-         DefaultTableModel model1 = (DefaultTableModel) jTable1.getModel();
-         model1.setRowCount(0);
         
-         for (int i =0;i<system.getCommDirectory().getCommunityList().size();i++){
-                        Object rowData[] = new Object[1];
-                        rowData[0] = system.getCommDirectory().getCommunityList().get(i).getName();
-                        model1.addRow(rowData);
-        }
+        
+//         for (int i =0;i<system.getCommDirectory().getCommunityList().size();i++){
+//                        Object rowData[] = new Object[1];
+//                        rowData[0] = system.getCommDirectory().getCommunityList().get(i).getName();
+//                        model1.addRow(rowData);
+//        }
          
     }
 

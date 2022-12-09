@@ -58,6 +58,10 @@ public class CityDirectory extends City {
         this.cityList = cityList;
     }
     
+    public void removeCity(City c){
+        cityList.remove(c);
+    }
+    
 
     @Override
     public String toString() {

@@ -6,6 +6,8 @@ package UserInterface.Hopsital;
 
 import Business.Organization;
 import javax.swing.JSplitPane;
+import HospitalEnterprise.Hospital;
+
 
 /**
  *
@@ -141,7 +143,7 @@ public class HospitalJPanel extends javax.swing.JPanel {
         //        frame.setLayout(new BorderLayout());
         //        Component HospitalsJPanel = null;
         //        frame.add(HospitalsJPanel, BorderLayout.CENTER);
-        ManageHospitalsJPanel adminPanel = new ManageHospitalsJPanel();
+        ManageHospitalsJPanel adminPanel = new ManageHospitalsJPanel(system);
         jSplitPane1.setRightComponent(adminPanel);
     }//GEN-LAST:event_jButton1ActionPerformed
 
