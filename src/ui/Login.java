@@ -5,7 +5,6 @@
 package ui;
 
 import Business.Organization;
-import UserInterface.Hopsital.HospJPanel;
 import UserInterface.Hopsital.HospitalJFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;

@@ -5,7 +5,7 @@
 package ui;
 
 import Business.Organization;
-import UserInterface.Admin.CreateAdmin;
+import ui.Admin.CreateAdmin;
 import UserInterface.Admin.CommunityAccess;
 
 /**
