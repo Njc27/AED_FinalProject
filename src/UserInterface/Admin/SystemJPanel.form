@@ -136,7 +136,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jTabbedPane1" alignment="0" pref="645" max="32767" attributes="0"/>
+                  <Component id="jTabbedPane1" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -204,45 +204,53 @@
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="2" attributes="0">
-                                              <Component id="jPhnNo" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jZipCode" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jCommunity" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jAddLine1" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jFirstName" alignment="0" max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="2" attributes="0">
+                                                      <Component id="jPhnNo" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="jZipCode" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="jAddLine1" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="jFirstName" alignment="0" max="32767" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="jCommunity" min="-2" pref="107" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                              </Group>
                                           </Group>
-                                          <EmptySpace max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jLabel17" alignment="1" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel22" alignment="1" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel23" alignment="1" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel27" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel19" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jAddLine2" min="-2" pref="132" max="-2" attributes="0"/>
-                                              <Component id="jLastName" min="-2" pref="132" max="-2" attributes="0"/>
-                                              <Component id="jCity" alignment="0" min="-2" pref="132" max="-2" attributes="0"/>
-                                              <Component id="jPassword" alignment="0" min="-2" pref="132" max="-2" attributes="0"/>
-                                              <Component id="jEmail" min="-2" pref="132" max="-2" attributes="0"/>
-                                              <Component id="jButton2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                                       </Group>
-                                      <Group type="102" alignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                               <Component id="jSsn1" alignment="0" max="32767" attributes="0"/>
                                               <Component id="jComboBox" alignment="0" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jAddLine2" pref="132" max="32767" attributes="0"/>
+                                      <Component id="jLastName" pref="132" max="32767" attributes="0"/>
+                                      <Component id="jPassword" alignment="0" pref="132" max="32767" attributes="0"/>
+                                      <Component id="jEmail" pref="132" max="32767" attributes="0"/>
+                                      <Component id="jButton2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jCity" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel2" pref="414" max="32767" attributes="0"/>
+                                  <Component id="jLabel2" pref="424" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jButton10" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -265,6 +273,8 @@
                                       <Component id="jLabel28" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jSsn1" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                                       <Component id="jButton1" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jEmail" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -283,9 +293,9 @@
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jCommunity" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                                       <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jCity" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <Component id="jCommunity" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jCity" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -298,12 +308,11 @@
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jPhnNo" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                                      <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jEmail" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace pref="45" max="32767" attributes="0"/>
+                                          <EmptySpace pref="44" max="32767" attributes="0"/>
                                           <Component id="jLabel2" min="-2" pref="185" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
@@ -380,7 +389,7 @@
                                 <StringItem index="2" value="Insurance Admin"/>
                                 <StringItem index="3" value="Community Admin"/>
                                 <StringItem index="4" value="Finance Admin"/>
-                                <StringItem index="5" value="Doctor"/>
+                                <StringItem index="5" value=" "/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -397,8 +406,6 @@
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Enter Code:"/>
                           </Properties>
-                        </Component>
-                        <Component class="javax.swing.JTextField" name="jCommunity">
                         </Component>
                         <Component class="javax.swing.JTextField" name="jSsn1">
                           <Events>
@@ -419,8 +426,6 @@
                         <Component class="javax.swing.JTextField" name="jZipCode">
                         </Component>
                         <Component class="javax.swing.JTextField" name="jPassword">
-                        </Component>
-                        <Component class="javax.swing.JTextField" name="jCity">
                         </Component>
                         <Component class="javax.swing.JTextField" name="jEmail">
                         </Component>
@@ -464,6 +469,34 @@
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton11ActionPerformed"/>
                           </Events>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="DOB:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JComboBox" name="jCommunity">
+                          <Properties>
+                            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                              <StringArray count="0"/>
+                            </Property>
+                          </Properties>
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                          </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JComboBox" name="jCity">
+                          <Properties>
+                            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                              <StringArray count="0"/>
+                            </Property>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCityActionPerformed"/>
+                          </Events>
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                          </AuxValues>
                         </Component>
                       </SubComponents>
                     </Container>

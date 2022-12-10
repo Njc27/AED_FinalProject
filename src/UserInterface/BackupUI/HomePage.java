@@ -129,9 +129,9 @@ public class HomePage extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Login login = new Login(system,this);
-        login.setVisible(true);
-        this.setVisible(false);
+//        Login login = new Login(system,this);
+//        login.setVisible(true);
+//        this.setVisible(false);
         
 
         

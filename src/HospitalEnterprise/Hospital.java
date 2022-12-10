@@ -15,10 +15,11 @@ public class Hospital {
     //String com;
 //    Community community;
 //    String city;
-    int zipCode;
+    String zipCode;
     String email;
     String phone;
     DoctorDirectory doctorDirectory;
+    TherapistDirectory therapistDirectory;
     PatientDirectory patientDirectory;
     
     public Hospital(){
@@ -35,7 +36,7 @@ public class Hospital {
 //        this.patientDirectory = patientDirectory;
 //    }
     
-    public Hospital(String name,String com, String city, int zipCode, DoctorDirectory doctorDirectory, PatientDirectory patientDirectory) {
+    public Hospital(String name,String com, String city, String zipCode, DoctorDirectory doctorDirectory, PatientDirectory patientDirectory) {
         this.name = name;
 //        this.com = com;
 //        //this.community = community;
@@ -69,13 +70,15 @@ public class Hospital {
 //        this.city = city;
 //    }
 
-    public int getZipCode() {
+    public String getZipCode() {
         return zipCode;
     }
 
-    public void setZipCode(int zipCode) {
+    public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
     }
+
+    
 
     public String getEmail() {
         return email;
@@ -118,6 +121,16 @@ public class Hospital {
     public void setPatientDirectory(PatientDirectory patientDirectory) {
         this.patientDirectory = patientDirectory;
     }
+
+    public TherapistDirectory getTherapistDirectory() {
+        return therapistDirectory;
+    }
+
+    public void setTherapistDirectory(TherapistDirectory therapistDirectory) {
+        this.therapistDirectory = therapistDirectory;
+    }
+    
+    
     
      @Override
     public String toString() {

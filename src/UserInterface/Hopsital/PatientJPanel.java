@@ -4,6 +4,21 @@
  */
 package UserInterface.Hopsital;
 
+import Business.Organization;
+import CommunityEnterprise.City;
+import CommunityEnterprise.CityDirectory;
+import CommunityEnterprise.Community;
+import CommunityEnterprise.CommunityDirectory;
+import CommunityEnterprise.LoginCredentials;
+import CommunityEnterprise.PeopleDirectory;
+import HospitalEnterprise.DoctorDirectory;
+import HospitalEnterprise.Hospital;
+import HospitalEnterprise.Patient;
+import UserInterface.Patient.PatloginJPanel;
+import java.util.Date;
+import javax.swing.JOptionPane;
+import javax.swing.JSplitPane;
+
 /**
  *
  * @author namithajc
@@ -13,8 +28,25 @@ public class PatientJPanel extends javax.swing.JPanel {
     /**
      * Creates new form PatientJPanel
      */
-    public PatientJPanel() {
+    Organization system;
+    JSplitPane jSplitPane1;
+    CityDirectory cityList;
+    DoctorDirectory doctor;
+    CommunityDirectory com;
+    PeopleDirectory people;
+    boolean isPresent = false;
+    boolean isView;
+    
+    public PatientJPanel(Organization system,JSplitPane jSplitPane1) {
         initComponents();
+         this.isView = isView;
+        this.system = system;
+        this.cityList = cityList;
+        this.jSplitPane1 = jSplitPane1;
+        for (int i = 0; i< system.getCityDirectory().getCityList().size();i++){
+            jcity.addItem(system.getCityDirectory().getCityList().get(i).getCityName());
+        }
+        
     }
 
     /**
@@ -37,7 +69,6 @@ public class PatientJPanel extends javax.swing.JPanel {
         jLPatPhone = new javax.swing.JLabel();
         jPatientName1 = new javax.swing.JTextField();
         jTPatientAge = new javax.swing.JTextField();
-        jPatientGender = new javax.swing.JTextField();
         jPatientEmail = new javax.swing.JTextField();
         jLPatEmail = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -62,6 +93,7 @@ public class PatientJPanel extends javax.swing.JPanel {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -113,14 +145,6 @@ public class PatientJPanel extends javax.swing.JPanel {
             }
         });
         jPanel2.add(jTPatientAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 161, -1));
-
-        jPatientGender.setFont(new java.awt.Font("Lava Kannada", 0, 14)); // NOI18N
-        jPatientGender.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPatientGenderActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jPatientGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 161, -1));
 
         jPatientEmail.setFont(new java.awt.Font("Lava Kannada", 0, 14)); // NOI18N
         jPatientEmail.addActionListener(new java.awt.event.ActionListener() {
@@ -272,6 +296,9 @@ public class PatientJPanel extends javax.swing.JPanel {
         jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 300, -1, -1));
         jPanel2.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 160, -1));
 
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Others" }));
+        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 160, -1));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -349,6 +376,55 @@ public class PatientJPanel extends javax.swing.JPanel {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+        String id = jId1.getText();
+        String selectedCity = (String) jcity.getSelectedItem();
+        String selectedComm = (String) jCommunity.getSelectedItem();
+        //String selectedHosp = (String) jHospital.getSelectedItem();
+        City city = system.getCityDirectory().getCityByName(selectedCity);
+        Community com = city.getComDir().getCommunityByName(selectedComm);
+        //Hospital hosp = com.getHospDirectory().getHospitalByName(selectedHosp);
+        
+        Patient patient = new Patient();
+        String fname = jPatientName.getText();
+        //String lname = jPatientName.getText();
+        Date dob = jDateChooser1.getDate();
+        String gender = (String) jComboBox1.getSelectedItem();
+        String phoneNo = jPatientPhoneNo.getText();
+        String email = jPatientEmail.getText();
+        //String password = jPassword.getText();
+        String aptNo = jAptNo.getText();
+        String stNo = jstNo.getText();
+        String zip = jSt.getText();
+        LoginCredentials temp = new LoginCredentials();
+        temp.setEmail(email);
+        //temp.setPassword(password);
+        //String username = ssn
+        //temp.setUserName(lname);
+        
+        patient.setSsn(id);
+        patient.setFirstName(fname);
+        //patient.setLastName(lname);
+        patient.setPhoneNo(phoneNo);
+        patient.setAddressLine1(aptNo);
+        patient.setAddressLine2(stNo);
+        patient.setCity(city.getCityName());
+        patient.setCommunity(com.getName());
+        patient.setDob(dob);
+        patient.setEmailId(email);
+        patient.setGender(gender);
+        patient.setLoginCredentials(patient);
+        //patient.setPassword(password);
+        patient.setZipCode(zip);
+        patient.setLoginCredentials(new LoginCredentials(fname+id,"",email));
+     
+        if(fname.trim().length() == 0 || id.trim().length() == 0|| gender.trim().length() == 0 || phoneNo.trim().length() == 0|| email.trim().length() == 0 ){
+            JOptionPane.showMessageDialog(this, "All Fields must be entered");
+        }
+        else{
+//            hosp.getPatientCatalouge().addPatient(people);
+            PatloginJPanel patLog = new PatloginJPanel(system,jSplitPane1);
+            jSplitPane1.setRightComponent(patLog);
+        }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -361,6 +437,13 @@ public class PatientJPanel extends javax.swing.JPanel {
 
     private void jcityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcityActionPerformed
         // TODO add your handling code here:
+         jCommunity.removeAllItems();
+        String selectedCity = (String) jcity.getSelectedItem();
+        City selected = system.getCityDirectory().getCityByName(selectedCity);
+        CommunityDirectory commLog = selected.getComDir();
+         for(int i = 0 ; i < commLog.getCommunityList().size();i++){
+             jCommunity.addItem(commLog.getCommunityList().get(i).getName());
+         }
     }//GEN-LAST:event_jcityActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -391,10 +474,6 @@ public class PatientJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPatientEmailActionPerformed
 
-    private void jPatientGenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPatientGenderActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPatientGenderActionPerformed
-
     private void jTPatientAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTPatientAgeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTPatientAgeActionPerformed
@@ -415,6 +494,7 @@ public class PatientJPanel extends javax.swing.JPanel {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jCommunity;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JTextField jId1;
@@ -438,7 +518,6 @@ public class PatientJPanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField jPatientEmail;
-    private javax.swing.JTextField jPatientGender;
     private javax.swing.JTextField jPatientName;
     private javax.swing.JTextField jPatientName1;
     private javax.swing.JTextField jPatientPhoneNo;

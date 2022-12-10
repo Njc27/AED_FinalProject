@@ -37,18 +37,26 @@ public class ConfigureASystem {
           hp.setName("BostonHosp");
           hp2.setName("HarvardMedical");
           HospitalDirectory hosp= new HospitalDirectory();
+          HospitalDirectory hosp1= new HospitalDirectory();
+          HospitalDirectory hosp2= new HospitalDirectory();
+          HospitalDirectory hosp3= new HospitalDirectory();
           hosp.addHospital(hp);
           hosp.addHospital(hp2);
+          
+          
           
           Community c = new Community();
           c.setName("Bolyston St.");
           c.setHospDirectory(hosp);
           Community c1 = new Community();
           c1.setName("Avenue St.");
+          c1.setHospDirectory(hosp3);
           Community c2 = new Community();
           c2.setName("Princeton");
+          c2.setHospDirectory(hosp1);
           Community c3 = new Community();
           c3.setName("Montclair");
+          c3.setHospDirectory(hosp2);
           CommunityDirectory commDir = new CommunityDirectory();
           CommunityDirectory commDir2 = new CommunityDirectory();
           commDir.addCommunity(c);
@@ -60,17 +68,18 @@ public class ConfigureASystem {
          
           People p = new People("AAA-GG-SSSS","System","Admin","admin@neu.com","","","","","","",true,false,false,false,new LoginCredentials("admin","password",""));
           People h = new People("SSN1","Hospital","Admin","hospadmin@neu.com","","","","","","",false,false,true,false,new LoginCredentials("hospadmin","hosppassword",""));
+          People p2 = new People("AAA","Nagarag","Grover","ad@neu.com","8576165163","Smith","street","Roxy","Boston","02215",false,false,false,false,new LoginCredentials("","",""));
           PeopleDirectory peopDir = new PeopleDirectory();
           p.setUserName("admin");
           p.setPassword("password");
           h.setUserName("hospadmin");
           h.setPassword("hosppassword");
           peopDir.addPerson(p);
+          peopDir.addPerson(p2);
           peopDir.addPerson(h);
           
           Date date = new Date();
           Date date1 = StringToDate("1997-12-27 17:03:00");
-          
           Patient p1 = new Patient("ssn1","Nisarga","Venkatesh","nisarga@gmail.com","8576165163","Smith","street","Roxy","Boston","02215","BostonHosp","Female",date1,new LoginCredentials("pat1","patpass","Nisraga@gmail.com"));
           PatientDirectory pd = new PatientDirectory();
           pd.addPatient(p1);

@@ -10,6 +10,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JSplitPane;
 import UserInterface.Hopsital.HospitalJPanel;
 import UserInterface.Admin.SystemJPanel;
+import UserInterface.BackupUI.SystemAdmin;
+import UserInterface.Community.CommunityAdminJPanel;
 
 /**
  *
@@ -50,12 +52,16 @@ public class LoginJPanel extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
+        jUsername.setFont(new java.awt.Font("Lava Kannada", 0, 14)); // NOI18N
         jUsername.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
+        jLabel1.setFont(new java.awt.Font("Lava Kannada", 0, 14)); // NOI18N
         jLabel1.setText("Login As:");
 
+        jLabel2.setFont(new java.awt.Font("Lava Kannada", 0, 14)); // NOI18N
         jLabel2.setText("Username:");
 
+        jComboBox1.setFont(new java.awt.Font("Lava Kannada", 0, 14)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "System Admin", "Hospital Admin", "Doctor", "Therapist", "Insurance Admin", "Finance Admin", "Emergency Admin" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,9 +69,13 @@ public class LoginJPanel extends javax.swing.JPanel {
             }
         });
 
+        jPassword.setFont(new java.awt.Font("Lava Kannada", 0, 14)); // NOI18N
+
+        jLabel3.setFont(new java.awt.Font("Lava Kannada", 0, 14)); // NOI18N
         jLabel3.setText("Password:");
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setFont(new java.awt.Font("Lava Kannada", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Login");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -81,47 +91,44 @@ public class LoginJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 84, Short.MAX_VALUE)
+                .addContainerGap(60, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel3))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jUsername)
-                            .addComponent(jPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(58, 58, 58)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jUsername)
+                        .addComponent(jPassword))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(76, 76, 76)
                 .addComponent(jLabel4)
-                .addGap(25, 25, 25))
+                .addGap(30, 30, 30))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(155, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addGap(106, 106, 106))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(165, 165, 165)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
+                .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
+                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(55, 55, 55)
+                .addGap(52, 52, 52)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(185, 185, 185))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(115, 115, 115)
-                .addComponent(jLabel4)
-                .addContainerGap(146, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -135,10 +142,12 @@ public class LoginJPanel extends javax.swing.JPanel {
         String selectedType = (String) jComboBox1.getSelectedItem();
         String username = jUsername.getText();
         String password = jPassword.getText();
+ 
         if(selectedType.equalsIgnoreCase("System Admin")){
             SystemAdmin sysAdmin= new SystemAdmin(system);
             if(username.trim().length() > 0 && password.trim().length()>0){
-                if(system.getPeopleDirectory().validateUserNameAndPassword(username, password) == true){
+                if(system.getPeopleDirectory().validateUserNameAndPassword(username, password, selectedType) == true){
+                    
                     SystemJPanel sysPanel = new SystemJPanel(system);
                     jSplitPane1.setRightComponent(sysPanel);
 //                    this.setVisible(false);
@@ -156,9 +165,29 @@ public class LoginJPanel extends javax.swing.JPanel {
         if(selectedType.equalsIgnoreCase("Hospital Admin")){
             HospitalJPanel hospAdmin= new HospitalJPanel(system);
             if(username.trim().length() > 0 && password.trim().length()>0){
-                if(system.getPeopleDirectory().validateUserNameAndPassword(username, password) == true){
+                if(system.getPeopleDirectory().validateUserNameAndPassword(username, password,selectedType) == true){
                     HospitalJPanel hospPanel = new HospitalJPanel(system);
                     jSplitPane1.setRightComponent(hospPanel);
+//                    this.setVisible(false);
+//                    hospAdmin.setVisible(true);
+                    //jSplitPane1.setRightComponent(hospAdmin);
+                }
+                else{
+                    JOptionPane.showMessageDialog(this, "Invalid Username and Password");
+                }
+
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "Please Enter Username and Password");
+            }
+        }
+        
+         if(selectedType.equalsIgnoreCase("Community Admin")){
+            CommunityAdminJPanel comAdmin= new CommunityAdminJPanel(system);
+            if(username.trim().length() > 0 && password.trim().length()>0){
+                if(system.getPeopleDirectory().validateUserNameAndPassword(username, password,selectedType) == true){
+                    CommunityAdminJPanel comPanel = new CommunityAdminJPanel(system);
+                    jSplitPane1.setRightComponent(comPanel);
 //                    this.setVisible(false);
 //                    hospAdmin.setVisible(true);
                     //jSplitPane1.setRightComponent(hospAdmin);

@@ -5,6 +5,7 @@
 package Business;
 
 import CommunityEnterprise.CityDirectory;
+import CommunityEnterprise.EventDirectory;
 import HospitalEnterprise.HospitalDirectory;
 import CommunityEnterprise.PeopleDirectory;
 import HospitalEnterprise.PatientDirectory;
@@ -16,8 +17,8 @@ import HospitalEnterprise.PatientDirectory;
 public class Organization {
     CityDirectory cityDirectory;
     PeopleDirectory peopleDirectory;
-    HospitalDirectory hospitalDirectory;
     PatientDirectory patientDirectory;
+    EventDirectory eventDirectory;
 
     public Organization() {
         cityDirectory = new CityDirectory();
@@ -40,13 +41,7 @@ public class Organization {
         this.peopleDirectory = peopleDirectory;
     }
 
-    public HospitalDirectory getHospitalDirectory() {
-        return hospitalDirectory;
-    }
-
-    public void setHospitalDirectory(HospitalDirectory hospitalDirectory) {
-        this.hospitalDirectory = hospitalDirectory;
-    }
+    
 
     public PatientDirectory getPatientDirectory() {
         return patientDirectory;
@@ -55,6 +50,15 @@ public class Organization {
     public void setPatientDirectory(PatientDirectory patientDirectory) {
         this.patientDirectory = patientDirectory;
     }
+
+    public EventDirectory getEventDirectory() {
+        return eventDirectory;
+    }
+
+    public void setEventDirectory(EventDirectory eventdirectory) {
+        this.eventDirectory = eventdirectory;
+    }
+    
     
     @Override
     public String toString() {

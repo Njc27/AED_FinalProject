@@ -6,6 +6,7 @@ package UserInterface.Admin;
 
 import Business.Organization;
 import CommunityEnterprise.City;
+import DBConn.DB4OUtil;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -21,6 +22,8 @@ public class CityJPanel extends javax.swing.JPanel {
     Organization system;
     boolean isEdit = false;
     String beforeEdit;
+    private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
+
     public CityJPanel(Organization system) {
         initComponents();
         this.system = system;
@@ -177,6 +180,9 @@ public class CityJPanel extends javax.swing.JPanel {
                 populateTable();
             }
         }
+        System.out.println(system);
+       dB4OUtil.storeSystem(system);
+
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -215,8 +221,8 @@ public class CityJPanel extends javax.swing.JPanel {
             jButton1.setText("Save");
             beforeEdit = selectedCity;
             isEdit = true;
-
         }
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
    public void populateTable(){

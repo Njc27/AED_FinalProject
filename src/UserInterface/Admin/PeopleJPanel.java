@@ -12,6 +12,7 @@ import CommunityEnterprise.CommunityDirectory;
 import CommunityEnterprise.LoginCredentials;
 import CommunityEnterprise.People;
 import CommunityEnterprise.PeopleDirectory;
+import DBConn.DB4OUtil;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.Period;
@@ -27,11 +28,13 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author namithajc
  */
+
 public class PeopleJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form PeopleJPanel
      */
+    private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
     JSplitPane jSplitPane2;
     CityDirectory cityLog;
     PeopleDirectory peopleList;
@@ -86,7 +89,6 @@ public class PeopleJPanel extends javax.swing.JPanel {
         jComboBox1 = new javax.swing.JComboBox<>();
         jCommunity = new javax.swing.JComboBox<>();
         jCity = new javax.swing.JComboBox<>();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
@@ -94,6 +96,7 @@ public class PeopleJPanel extends javax.swing.JPanel {
         jPeopleTable = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
 
         jTabbedPane1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -160,19 +163,6 @@ public class PeopleJPanel extends javax.swing.JPanel {
             }
         });
 
-        jDateChooser2.addInputMethodListener(new java.awt.event.InputMethodListener() {
-            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
-            }
-            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
-                jDateChooser2InputMethodTextChanged(evt);
-            }
-        });
-        jDateChooser2.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                jDateChooser2PropertyChange(evt);
-            }
-        });
-
         jButton3.setText("Edit");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -210,9 +200,8 @@ public class PeopleJPanel extends javax.swing.JPanel {
                             .addComponent(jCity, 0, 142, Short.MAX_VALUE)
                             .addComponent(jZipCode)
                             .addComponent(jAddLine1)
-                            .addComponent(jAge)
-                            .addComponent(jDateChooser2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 229, Short.MAX_VALUE)
+                            .addComponent(jAge))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 246, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel27)
                             .addComponent(jLabel17)
@@ -223,11 +212,11 @@ public class PeopleJPanel extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton3)
-                        .addGap(37, 37, 37)
+                        .addGap(58, 58, 58)
                         .addComponent(jButton1)
-                        .addGap(29, 29, 29)
+                        .addGap(47, 47, 47)
                         .addComponent(jButton4)
-                        .addGap(8, 8, 8)))
+                        .addGap(41, 41, 41)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
@@ -281,9 +270,7 @@ public class PeopleJPanel extends javax.swing.JPanel {
                             .addComponent(jLabel25)
                             .addComponent(jZipCode, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel37)
-                            .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jLabel37)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel38)
@@ -317,18 +304,25 @@ public class PeopleJPanel extends javax.swing.JPanel {
             }
         });
 
+        jButton5.setText("Delete");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap(115, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap(115, Short.MAX_VALUE)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(215, 215, 215)
-                        .addComponent(jButton2)))
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton5)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29))
@@ -337,13 +331,15 @@ public class PeopleJPanel extends javax.swing.JPanel {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(61, 61, 61)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(155, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(162, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("View and Delete people", jPanel2);
@@ -380,13 +376,14 @@ public class PeopleJPanel extends javax.swing.JPanel {
         String email = jEmail.getText();
         temp.setEmail(email);
         //temp.setPhone(phone);
-        Date dob = jDateChooser2.getCalendar() == null ? null:jDateChooser2.getDate();
+//        Date dob = jDateChooser2.getCalendar() == null ? null:jDateChooser2.getDate();
         isPresent = system.getPeopleDirectory().checkPersonByFirstAndLastName(firstName, lastName);
         if(isPresent){
             JOptionPane.showMessageDialog(this, "Person is present");
         }
         else{
-            if(firstName.trim().length()>0 && lastName.trim().length()>0 && dob !=null){
+//            if(firstName.trim().length()>0 && lastName.trim().length()>0 && dob !=null){
+            if(firstName.trim().length()>0 && lastName.trim().length()>0){
             People p = new People();
             p.setSsn(ssn);
             p.setFirstName(firstName);
@@ -398,7 +395,7 @@ public class PeopleJPanel extends javax.swing.JPanel {
             p.setZipCode(zipCode);
             p.setLoginCredentials(temp);
             //p.setEmailId(email);
-            p.setDob(dob);
+//            p.setDob(dob);
             p.setPhoneNo(phoneNumber);
             p.setGender(gender);
 //            Email.sendMail("New User Created","Mm","aa","manju.pratuv@gmail.com");
@@ -411,6 +408,7 @@ public class PeopleJPanel extends javax.swing.JPanel {
             populateTable();
             
         }
+        dB4OUtil.storeSystem(system);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jAddLine1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAddLine1ActionPerformed
@@ -436,16 +434,16 @@ public class PeopleJPanel extends javax.swing.JPanel {
 
     private void jDateChooser2PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jDateChooser2PropertyChange
         // TODO add your handling code here:
-        LocalDate curDate = LocalDate.now();
-        if(jDateChooser2.getDate()!=null){
-            Instant instant = jDateChooser2.getDate().toInstant();
-        ZonedDateTime zone = instant.atZone(ZoneId.systemDefault());
-        LocalDate givenDate = zone.toLocalDate();
-        int age1  = Period.between(givenDate,curDate).getYears();
-        String age = String.valueOf(age1);
-        jAge.setText(age);
-        jAge.setEditable(false);
-        }
+//        LocalDate curDate = LocalDate.now();
+//        if(jDateChooser2.getDate()!=null){
+//            Instant instant = jDateChooser2.getDate().toInstant();
+//        ZonedDateTime zone = instant.atZone(ZoneId.systemDefault());
+//        LocalDate givenDate = zone.toLocalDate();
+//        int age1  = Period.between(givenDate,curDate).getYears();
+//        String age = String.valueOf(age1);
+//        jAge.setText(age);
+//        jAge.setEditable(false);
+//        }
         
     }//GEN-LAST:event_jDateChooser2PropertyChange
 
@@ -478,7 +476,7 @@ public class PeopleJPanel extends javax.swing.JPanel {
             jEmail.setText(selectedPerson.getEmailId());
             jPhnNo.setText(selectedPerson.getPhoneNo());
             jZipCode.setText(selectedPerson.getZipCode());
-            jDateChooser2.setDate(selectedPerson.getDob());
+//            jDateChooser2.setDate(selectedPerson.getDob());
             jCommunity.setSelectedItem(selectedPerson.getCommunity());
             jCity.setSelectedItem(selectedPerson.getCity());
             jAddLine1.setText(selectedPerson.getAddressLine1());
@@ -509,9 +507,11 @@ public class PeopleJPanel extends javax.swing.JPanel {
         String phoneNumber = jPhnNo.getText();
         String gender =(String) jComboBox1.getSelectedItem();
         String email = jEmail.getText();
-        Date dob = jDateChooser2.getCalendar() == null ? null:jDateChooser2.getDate();
+//        Date dob = jDateChooser2.getCalendar() == null ? null:jDateChooser2.getDate();
         
-        if(firstName.trim().length()>0 && lastName.trim().length()>0 && dob !=null){
+//        if(firstName.trim().length()>0 && lastName.trim().length()>0 && dob !=null){
+        if(firstName.trim().length()>0 && lastName.trim().length()>0){
+
             selectedPerson.setFirstName(firstName);
             selectedPerson.setLastName(lastName);
             selectedPerson.setAddressLine1(addLine1);
@@ -520,7 +520,7 @@ public class PeopleJPanel extends javax.swing.JPanel {
             selectedPerson.setCommunity(community);
             selectedPerson.setZipCode(zipCode);
             selectedPerson.setEmailId(email);
-            selectedPerson.setDob(dob);
+//            selectedPerson.setDob(dob);
             selectedPerson.setPhoneNo(phoneNumber);
             selectedPerson.setGender(gender);
             jSsn1.setText("");
@@ -529,7 +529,7 @@ public class PeopleJPanel extends javax.swing.JPanel {
             jEmail.setText("");
             jPhnNo.setText("");
             jZipCode.setText("");
-            jDateChooser2.setDate(null);
+//            jDateChooser2.setDate(null);
             jAddLine1.setText("");
             jComboBox1.setSelectedItem("");
             jAddLine2.setText("");
@@ -542,7 +542,11 @@ public class PeopleJPanel extends javax.swing.JPanel {
             else{
                 JOptionPane.showMessageDialog(this, "Fill all the fields"); 
             }
-        
+        jButton1.setVisible(true);
+        jButton3.setVisible(false);
+        jButton4.setVisible(false);
+        disableFields(true);
+        dB4OUtil.storeSystem(system);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked
@@ -553,12 +557,27 @@ public class PeopleJPanel extends javax.swing.JPanel {
             jEmail.setText("");
             jPhnNo.setText("");
             jZipCode.setText("");
-            jDateChooser2.setDate(null);
+//            jDateChooser2.setDate(null);
             jAddLine1.setText("");
             jComboBox1.setSelectedItem("");
             jAddLine2.setText("");
             
     }//GEN-LAST:event_jTabbedPane1MouseClicked
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) jPeopleTable.getModel();
+        int selectedRow = jPeopleTable.getSelectedRow();
+        if(selectedRow == -1){
+            JOptionPane.showMessageDialog(this, "Please Select a Row");
+        }
+        else{
+            String ssn = (String) model.getValueAt(selectedRow,1);
+            People p = system.getPeopleDirectory().findPersonBySSn(ssn);
+            system.getPeopleDirectory().removePerson(p);
+        }
+        dB4OUtil.storeSystem(system);
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     public void populateTable(){
         for (int i = 0; i< system.getCityDirectory().getCityList().size();i++){
@@ -588,7 +607,7 @@ public class PeopleJPanel extends javax.swing.JPanel {
             jPhnNo.setEditable(disable);
             jZipCode.setEditable(disable);
             jComboBox1.setEnabled(disable);
-            jDateChooser2.setEnabled(disable);
+//            jDateChooser2.setEnabled(disable);
             jCommunity.setEnabled(disable);
             jCity.setEnabled(disable);
             jAddLine1.setEditable(disable);
@@ -603,10 +622,10 @@ public class PeopleJPanel extends javax.swing.JPanel {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jCity;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jCommunity;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JTextField jEmail;
     private javax.swing.JTextField jFirstName;
     private javax.swing.JLabel jLabel16;

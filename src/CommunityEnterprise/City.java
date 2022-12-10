@@ -17,7 +17,7 @@ public class City {
     private CommunityDirectory comDir;
      
     public City() {
-        comDir = new CommunityDirectory();
+        
     }
     public City (String cityName, CommunityDirectory comDir){
         this.cityName = cityName;

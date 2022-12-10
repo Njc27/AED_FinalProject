@@ -55,9 +55,12 @@ public class HospitalDirectory extends Hospital{
         this.hospList = hospList;
     }
     
+    public int size() {
+        return hospList.size();
+    }
 
     @Override
     public String toString() {
-        return "HospitalDirectory{" + "communityList=" + hospList + '}';
+        return "HospitalDirectory{" + "hospList=" + hospList + '}';
     }
 }
