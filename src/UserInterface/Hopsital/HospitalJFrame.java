@@ -33,7 +33,7 @@ public class HospitalJFrame extends javax.swing.JFrame {
    // JSplitPane jSplitPane2;
     public HospitalJFrame(Organization system) {
         initComponents();
-        this.system = system;
+       this.system = system;
        this.jSplitPane1 = jSplitPane1;
     }
 
@@ -188,10 +188,11 @@ public class HospitalJFrame extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        ManageHospitalsJPanel adminPanel = new ManageHospitalsJPanel();
-        jSplitPane1.setRightComponent(adminPanel);
-//        ManageHospitals adminPanel = new ManageHospitals();
+        DoctorJPanel docJPanel = new DoctorJPanel(system);
+        jSplitPane1.setRightComponent(docJPanel);
+//        ManageHospitalsJPanel adminPanel = new ManageHospitalsJPanel();
 //        jSplitPane1.setRightComponent(adminPanel);
+
 
     }//GEN-LAST:event_jButton2ActionPerformed
 

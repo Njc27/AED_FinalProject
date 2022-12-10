@@ -5,14 +5,15 @@
 package CommunityEnterprise;
 
 import java.util.ArrayList;
-
+import HospitalEnterprise.HospitalDirectory;
 /**
  *
  * @author namithajc
  */
 public class Community {
     String name;
-    String city;
+   
+    HospitalDirectory hospDirectory;
 
 
     public String getName() {
@@ -23,18 +24,22 @@ public class Community {
         this.name = name;
     }
 
-    public String getCity() {
-        return city;
+  
+    public HospitalDirectory getHospDirectory() {
+        return hospDirectory;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setHospDirectory(HospitalDirectory hospDirectory) {
+        this.hospDirectory = hospDirectory;
     }
 
     @Override
     public String toString() {
-        return "Community{" + "name=" + name + "city=" + city +'}';
+        return "Community{" + "name=" + name + ", hospDirectory=" + hospDirectory + '}';
     }
+
+    
+   
     
 
 }

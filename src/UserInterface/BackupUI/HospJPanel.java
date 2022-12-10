@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package UserInterface.Hopsital;
+package UserInterface.BackupUI;
 
 import Business.Organization;
-import UserInterface.Admin.CreateAdmin;
+//import UserInterface.Admin.CreateAdmin;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
 

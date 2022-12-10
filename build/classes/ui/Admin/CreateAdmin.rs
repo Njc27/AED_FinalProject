@@ -1,1 +1,0 @@
-Ui.Admin.CreateAdmin

@@ -12,7 +12,7 @@ import java.util.ArrayList;
  *
  * @author namithajc
  */
-public class HospitalDirectory {
+public class HospitalDirectory extends Hospital{
     ArrayList<Hospital> hospList;
 
     public HospitalDirectory(ArrayList<Hospital> hospList) {
@@ -55,9 +55,12 @@ public class HospitalDirectory {
         this.hospList = hospList;
     }
     
+    public int size() {
+        return hospList.size();
+    }
 
     @Override
     public String toString() {
-        return "HospitalDirectory{" + "communityList=" + hospList + '}';
+        return "HospitalDirectory{" + "hospList=" + hospList + '}';
     }
 }

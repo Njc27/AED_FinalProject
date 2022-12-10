@@ -11,6 +11,7 @@ package CommunityEnterprise;
 public class LoginCredentials {
     String userName;
     String password;
+    String email;
 
     public String getUserName() {
         return userName;
@@ -28,14 +29,23 @@ public class LoginCredentials {
         this.password = password;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
     @Override
     public String toString() {
         return "LoginCredentials{" + "userName=" + userName + ", password=" + password + '}';
     }
 
-    public LoginCredentials(String userName, String password) {
+    public LoginCredentials(String userName, String password, String email) {
         this.userName = userName;
         this.password = password;
+        this.email = email;
     }
 
     public LoginCredentials() {
