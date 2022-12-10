@@ -3,23 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/UserInterface/Hopsital/HospitalJPanel.java</file>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/UserInterface/Hopsital/ManageHospitalsJPanel.java</file>
             <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/Business/ConfigureASystem.java</file>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/UserInterface/Admin/SystemJPanel.java</file>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/UserInterface/Patient/PatientRegistrationJPanel.java</file>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/UserInterface/Patient/BookAppointmentJPanel.java</file>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/Business/Email.java</file>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/UserInterface/Admin/PeopleJPanel.java</file>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/UserInterface/Admin/CityJPanel.java</file>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/UserInterface/Hopsital/HospitalJFrame.java</file>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/Business/InsuranceEnterprise.java</file>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/UserInterface/Main/LoginJPanel.java</file>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/CommunityEnterprise/PeopleDirectory.java</file>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/UserInterface/BackupUI/HomePage.java</file>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/UserInterface/Main/HomePageJFrame.java</file>
             <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/Business/EmergencyEnterprise.java</file>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/UserInterface/Hopsital/DoctorJPanel.java</file>
+            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/UserInterface/Patient/BookAppointmentJPanel.java</file>
+            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/UserInterface/Admin/SystemJPanel.java</file>
+            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/Business/Organization.java</file>
+            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/Business/Email.java</file>
+            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/Business/EmailMain.java</file>
+            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/UserInterface/Doctor/DoctorDashboard.java</file>
+            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/UserInterface/Main/HomePageJFrame.java</file>
+            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/UserInterface/Admin/PeopleJPanel.java</file>
         </group>
     </open-files>
 </project-private>

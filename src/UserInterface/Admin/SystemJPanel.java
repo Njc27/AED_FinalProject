@@ -676,7 +676,7 @@ public class SystemJPanel extends javax.swing.JPanel {
 
     private void jCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCityActionPerformed
         // TODO add your handling code here:
-         jCommunity.removeAllItems();
+        jCommunity.removeAllItems();
         String selectedCity = (String) jCity.getSelectedItem();
         City selected = system.getCityDirectory().getCityByName(selectedCity);
         CommunityDirectory commLog = selected.getComDir();
