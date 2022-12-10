@@ -1,18 +1,4 @@
-<<<<<<< Updated upstream:src/TheBusiness/EmergencyAdmin/Inventory.java
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package EmergencyEnterprise;
 
-/**
- *
- * @author namithajc
- */
-public class Inventory {
-    
-}
-=======
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -36,4 +22,4 @@ public class EmergencyAdmin {
     
     
 }
->>>>>>> Stashed changes:src/TheBusiness/EmergencyAdmin/EmergencyAdmin.java
+

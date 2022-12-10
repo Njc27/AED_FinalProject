@@ -4,8 +4,8 @@
  */
 package Business;
 
-import EmergencyEnterprise.AmbulanceDirectory;
-import EmergencyEnterprise.InventoryDirectory;
+import TheBusiness.EmergencyAdmin.AmbulanceDirectory;
+import TheBusiness.EmergencyAdmin.InventoryDirectory;
 
 
 /**
