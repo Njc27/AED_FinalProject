@@ -29,7 +29,26 @@ Community:
 
 Community admin can be able to create houses and host the Helpcare event inside the community requested by the patient.
 
-ClassDiagramFinal.png
+
+Model Diagram
+
+![Model](https://user-images.githubusercontent.com/113456510/206962768-e7b3a63f-8909-4aa4-9a57-ea38fdaac1b4.jpeg)
+
+
+Class Diagram
+
+![ClassDiagramFinal](https://user-images.githubusercontent.com/113456510/206962650-b1c015ba-51bb-449e-901a-159e2aac9e78.png)
+
+
+
+
+Object Diagram
+
+![Object diagram](https://user-images.githubusercontent.com/113456510/206962839-7b93eae4-bf78-44c2-9e08-9c8a86695d53.jpeg)
+
+
+
+
 
                                                 
                                                 
