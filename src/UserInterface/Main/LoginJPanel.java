@@ -8,10 +8,13 @@ import Business.Organization;
 import javax.swing.JPanel;
 import javax.swing.JOptionPane;
 import javax.swing.JSplitPane;
-import UserInterface.Hopsital.HospitalJPanel;
-import UserInterface.Admin.SystemJPanel;
-import UserInterface.BackupUI.SystemAdmin;
-import UserInterface.Community.CommunityAdminJPanel;
+//import UserInterface.Hopsital.HospitalJPanel;
+//import UserInterface.Admin.SystemJPanel;
+//import UserInterface.BackupUI.SystemAdmin;
+//import UserInterface.Community.CommunityAdminJPanel;
+import UserInterface.EmergencyAdmin.EmergencyAdminJpanel;
+import UserInterface.EmergencyAdmin.EmergencyRequestJpanel;
+import UserInterface.Insurance.InsuranceAdminJPanel;
 
 /**
  *
@@ -25,7 +28,7 @@ public class LoginJPanel extends javax.swing.JPanel {
     JSplitPane jSplitPane1;
     //JPanel jpanel2;
     Organization system;
-    HomePage home;
+//    HomePage home;
     public LoginJPanel(Organization system,HomePageJFrame home,JSplitPane jSplitPane1) {
         initComponents();
         this.system = system;
@@ -143,63 +146,83 @@ public class LoginJPanel extends javax.swing.JPanel {
         String username = jUsername.getText();
         String password = jPassword.getText();
  
-        if(selectedType.equalsIgnoreCase("System Admin")){
-            SystemAdmin sysAdmin= new SystemAdmin(system);
-            if(username.trim().length() > 0 && password.trim().length()>0){
-                if(system.getPeopleDirectory().validateUserNameAndPassword(username, password, selectedType) == true){
-                    
-                    SystemJPanel sysPanel = new SystemJPanel(system);
-                    jSplitPane1.setRightComponent(sysPanel);
-//                    this.setVisible(false);
-//                    sysAdmin.setVisible(true);
-                }
-                else{
-                    JOptionPane.showMessageDialog(this, "Invalid Username and Password");
-                }
-            }
-            else{
-                JOptionPane.showMessageDialog(this, "Please Enter Username and Password");
-            }
-        }
-
-        if(selectedType.equalsIgnoreCase("Hospital Admin")){
-            HospitalJPanel hospAdmin= new HospitalJPanel(system);
-            if(username.trim().length() > 0 && password.trim().length()>0){
-                if(system.getPeopleDirectory().validateUserNameAndPassword(username, password,selectedType) == true){
-                    HospitalJPanel hospPanel = new HospitalJPanel(system);
-                    jSplitPane1.setRightComponent(hospPanel);
-//                    this.setVisible(false);
-//                    hospAdmin.setVisible(true);
-                    //jSplitPane1.setRightComponent(hospAdmin);
-                }
-                else{
-                    JOptionPane.showMessageDialog(this, "Invalid Username and Password");
-                }
-
-            }
-            else{
-                JOptionPane.showMessageDialog(this, "Please Enter Username and Password");
-            }
-        }
-        
-         if(selectedType.equalsIgnoreCase("Community Admin")){
-            CommunityAdminJPanel comAdmin= new CommunityAdminJPanel(system);
-            if(username.trim().length() > 0 && password.trim().length()>0){
-                if(system.getPeopleDirectory().validateUserNameAndPassword(username, password,selectedType) == true){
-                    CommunityAdminJPanel comPanel = new CommunityAdminJPanel(system);
+//        if(selectedType.equalsIgnoreCase("System Admin")){
+//            SystemAdmin sysAdmin= new SystemAdmin(system);
+//            if(username.trim().length() > 0 && password.trim().length()>0){
+//                if(system.getPeopleDirectory().validateUserNameAndPassword(username, password, selectedType) == true){
+//                    
+//                    SystemJPanel sysPanel = new SystemJPanel(system);
+//                    jSplitPane1.setRightComponent(sysPanel);
+////                    this.setVisible(false);
+////                    sysAdmin.setVisible(true);
+//                }
+//                else{
+//                    JOptionPane.showMessageDialog(this, "Invalid Username and Password");
+//                }
+//            }
+//            else{
+//                JOptionPane.showMessageDialog(this, "Please Enter Username and Password");
+//            }
+//        }
+//
+//        if(selectedType.equalsIgnoreCase("Hospital Admin")){
+//            HospitalJPanel hospAdmin= new HospitalJPanel(system);
+//            if(username.trim().length() > 0 && password.trim().length()>0){
+//                if(system.getPeopleDirectory().validateUserNameAndPassword(username, password,selectedType) == true){
+//                    HospitalJPanel hospPanel = new HospitalJPanel(system);
+//                    jSplitPane1.setRightComponent(hospPanel);
+////                    this.setVisible(false);
+////                    hospAdmin.setVisible(true);
+//                    //jSplitPane1.setRightComponent(hospAdmin);
+//                }
+//                else{
+//                    JOptionPane.showMessageDialog(this, "Invalid Username and Password");
+//                }
+//
+//            }
+//            else{
+//                JOptionPane.showMessageDialog(this, "Please Enter Username and Password");
+//            }
+//        }
+//        
+//         if(selectedType.equalsIgnoreCase("Community Admin")){
+//            CommunityAdminJPanel comAdmin= new CommunityAdminJPanel(system);
+//            if(username.trim().length() > 0 && password.trim().length()>0){
+//                if(system.getPeopleDirectory().validateUserNameAndPassword(username, password,selectedType) == true){
+//                    CommunityAdminJPanel comPanel = new CommunityAdminJPanel(system);
+//                    jSplitPane1.setRightComponent(comPanel);
+////                    this.setVisible(false);
+////                    hospAdmin.setVisible(true);
+//                    //jSplitPane1.setRightComponent(hospAdmin);
+//                }
+//                else{
+//                    JOptionPane.showMessageDialog(this, "Invalid Username and Password");
+//                }
+//
+//            }
+//            else{
+//                JOptionPane.showMessageDialog(this, "Please Enter Username and Password");
+//            }
+//        }
+         
+        if(selectedType.equalsIgnoreCase("Insurance Admin")){
+           
+                    InsuranceAdminJPanel comPanel = new InsuranceAdminJPanel(system);
                     jSplitPane1.setRightComponent(comPanel);
 //                    this.setVisible(false);
 //                    hospAdmin.setVisible(true);
                     //jSplitPane1.setRightComponent(hospAdmin);
-                }
-                else{
-                    JOptionPane.showMessageDialog(this, "Invalid Username and Password");
-                }
-
-            }
-            else{
-                JOptionPane.showMessageDialog(this, "Please Enter Username and Password");
-            }
+                
+        }
+        
+                if(selectedType.equalsIgnoreCase("Emergency Admin")){
+           
+                    EmergencyRequestJpanel EmPanel = new EmergencyRequestJpanel(system);
+                    jSplitPane1.setRightComponent(EmPanel);
+//                    this.setVisible(false);
+//                    hospAdmin.setVisible(true);
+                    //jSplitPane1.setRightComponent(hospAdmin);
+                
         }
 
     }//GEN-LAST:event_jButton1ActionPerformed

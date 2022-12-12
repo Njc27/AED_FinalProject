@@ -4,7 +4,7 @@
  */
 package HospitalEnterprise;
 
-import CommunityEnterprise.LoginCredentials;
+import ComEnterprise.LoginCredentials;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -29,6 +29,7 @@ public class Patient extends LoginCredentials{
     Date dob;
     String gender;
     LoginCredentials loginCredentials;
+    EncounterHistory encHistory;
 
     public String getSsn() {
         return ssn;
@@ -141,6 +142,14 @@ public class Patient extends LoginCredentials{
     public void setHospital(String hospital) {
         this.hospital = hospital;
     }
+
+    public EncounterHistory getEncHistory() {
+        return encHistory;
+    }
+
+    public void setEncHistory(EncounterHistory encHistory) {
+        this.encHistory = encHistory;
+    }
     
     
     
@@ -157,6 +166,7 @@ public class Patient extends LoginCredentials{
     }
     return result ;
 }
+    
     
     public Patient(String ssn, String firstName, String lastName, String emailId, String phoneNo, String addressLine1, String addressLine2, String community, String hospital, String city, String zipCode,String gender,Date Dob, LoginCredentials loginCredentials) {
         this.ssn = ssn;

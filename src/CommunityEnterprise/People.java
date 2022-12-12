@@ -151,6 +151,17 @@ public class People extends LoginCredentials{
     public boolean isEmergencyAdmin() {
         return emergencyAdmin;
     }
+    
+    public boolean isInsuranceAdmin(){
+         return insuranceAdmin;
+    }
+
+    public void setInsuranceAdmin(boolean insuranceAdmin) {
+        this.insuranceAdmin = insuranceAdmin;
+    }
+   
+    
+    
 
     public void setEmergencyAdmin(boolean emergencyAdmin) {
         this.emergencyAdmin = emergencyAdmin;
@@ -187,11 +198,35 @@ public class People extends LoginCredentials{
     public void setTherapist(boolean therapist) {
         this.therapist = therapist;
     }
+
+//    public String getUserName() {
+//        return userName;
+//    }
+//
+//    public void setUserName(String userName) {
+//        this.userName = userName;
+//    }
+//
+//    public String getPassword() {
+//        return password;
+//    }
+//
+//    public void setPassword(String password) {
+//        this.password = password;
+//    }
+//
+//    public String getEmail() {
+//        return email;
+//    }
+//
+//    public void setEmail(String email) {
+//        this.email = email;
+//    }
     
     
     
 
-    public People(String ssn, String firstName, String lastName, String emailId, String phoneNo, String addressLine1, String addressLine2, String community, String city, String zipCode, boolean systemAdmin, boolean communityAdmin, boolean hospitalAdmin, boolean emergencyAdmin, LoginCredentials loginCredentials) {
+    public People(String ssn, String firstName, String lastName, String emailId, String phoneNo, String addressLine1, String addressLine2, String community, String city, String zipCode, boolean systemAdmin, boolean communityAdmin, boolean hospitalAdmin, boolean emergencyAdmin, boolean insuranceAdmin, LoginCredentials loginCredentials) {
         this.ssn = ssn;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -218,7 +253,7 @@ public class People extends LoginCredentials{
 
     @Override
     public String toString() {
-        return "People{" + "ssn=" + ssn + ", firstName=" + firstName + ", lastName=" + lastName + ", emailId=" + emailId + ", phoneNo=" + phoneNo + ", addressLine1=" + addressLine1 + ", addressLine2=" + addressLine2 + ", community=" + community + ", city=" + city + ", zipCode=" + zipCode + ", systemAdmin=" + systemAdmin + ", communityAdmin=" + communityAdmin + ", hospitalAdmin=" + hospitalAdmin + ", emergencyAdmin=" + emergencyAdmin + ", loginCredentials=" + loginCredentials + '}';
+        return "People{" + "ssn=" + ssn + ", firstName=" + firstName + ", lastName=" + lastName + ", emailId=" + emailId + ", phoneNo=" + phoneNo + ", addressLine1=" + addressLine1 + ", addressLine2=" + addressLine2 + ", community=" + community + ", city=" + city + ", zipCode=" + zipCode + ", systemAdmin=" + systemAdmin + ", communityAdmin=" + communityAdmin + ", hospitalAdmin=" + hospitalAdmin + ", emergencyAdmin=" + emergencyAdmin + ",insuranceAdmin=" + insuranceAdmin + ", loginCredentials=" + loginCredentials + '}';
     }
     
 

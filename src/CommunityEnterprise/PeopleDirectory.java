@@ -36,10 +36,14 @@ public class PeopleDirectory extends People{
         peopleList.remove(p);
     }
     
+    public int size() {
+        return peopleList.size();
+    }
+    
     public ArrayList<People> systemAdminList(){
         ArrayList<People> systemAdminList = new ArrayList();
         for(int i = 0;i < peopleList.size();i++){
-            if(peopleList.get(i).isSystemAdmin() || peopleList.get(i).isCommunityAdmin()||peopleList.get(i).isHospitalAdmin()){
+            if(peopleList.get(i).isSystemAdmin() || peopleList.get(i).isCommunityAdmin()||peopleList.get(i).isHospitalAdmin()||peopleList.get(i).isInsuranceAdmin()){
                 systemAdminList.add(peopleList.get(i));
             }
         }
@@ -83,6 +87,13 @@ public class PeopleDirectory extends People{
                if(peopleList.get(i).loginCredentials.getUserName().equalsIgnoreCase(username) && peopleList.get(i).loginCredentials.getPassword().equalsIgnoreCase(password) && peopleList.get(i).isEmergencyAdmin()){
                 return true;  
              }
+               
+               
+        }
+             else if(type.equalsIgnoreCase("Insurance Admin")){
+               if(peopleList.get(i).loginCredentials.getUserName().equalsIgnoreCase(username) && peopleList.get(i).loginCredentials.getPassword().equalsIgnoreCase(password) && peopleList.get(i).isInsuranceAdmin()){
+                return true;  
+             }     
         }
         }
         return false;

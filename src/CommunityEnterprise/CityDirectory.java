@@ -46,9 +46,9 @@ public class CityDirectory extends City {
     public void addCity(City c){
         cityList.add(c);
     }
-    public void removeCommunity(Community c){
-        cityList.remove(c);
-    }
+//    public void removeCommunity(Community c){
+//        cityList.remove(c);
+//    }
 
     public ArrayList<City> getCityList() {
         return cityList;

@@ -13,8 +13,8 @@ import java.lang.String;
  */
 public class Email {
     
-public static void sendMail(String recepient) throws MessagingException{
-    //public static void sendMail(String recepient,String subject,String body) throws MessagingException{
+//public static void sendMail(String recepient) throws MessagingException{
+    public static void sendMail(String recepient,String subject,String body) throws MessagingException{
         //public static void sendMail(String Subject,String username,String Password,String receipent)
     
         Properties props = new Properties();

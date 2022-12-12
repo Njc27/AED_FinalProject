@@ -10,7 +10,7 @@ package Business;
  */
 public class EmailMain {
     public static void main(String args[]) throws Exception {
-    Email.sendMail("gowdavnisarga@gmail.com");
+   Email.sendMail("gowdavnisarga@gmail.com","hey","hello");
 }
     
 }

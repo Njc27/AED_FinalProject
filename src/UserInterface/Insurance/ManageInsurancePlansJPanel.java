@@ -4,6 +4,11 @@
  */
 package UserInterface.Insurance;
 
+import Business.Organization;
+import TheBusiness.Insurance.InsurancePlan;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author banishmg
@@ -13,7 +18,9 @@ public class ManageInsurancePlansJPanel extends javax.swing.JPanel {
     /**
      * Creates new form ManageInsurancePlansJPanel
      */
-    public ManageInsurancePlansJPanel() {
+    Organization system = Organization.getInstance();
+    //InsurancePlan InsPlan;
+    public ManageInsurancePlansJPanel(Organization system) {
         initComponents();
     }
 
@@ -26,19 +33,205 @@ public class ManageInsurancePlansJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 749, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 444, Short.MAX_VALUE)
-        );
+        PlanValTxtField = new javax.swing.JTextField();
+        PlanNameTxtField = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        CompNameTxtField = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        plansTable = new javax.swing.JTable();
+        jLabel5 = new javax.swing.JLabel();
+        PlanAmtTxtField = new javax.swing.JTextField();
+        deleteBtn = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        PlanValTxtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PlanValTxtFieldActionPerformed(evt);
+            }
+        });
+        add(PlanValTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 378, 129, -1));
+        add(PlanNameTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 337, 129, -1));
+
+        jLabel4.setText("Plan premium amount");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(78, 425, -1, -1));
+
+        jLabel3.setText("Plan Validity");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(78, 384, -1, -1));
+
+        jLabel2.setText("Plan ");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(78, 340, 65, 20));
+
+        jButton2.setText("View Details");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(461, 296, -1, -1));
+
+        jButton1.setText("View");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(575, 296, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("MANAGE INSURANCE PLANS");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 36, 775, 38));
+
+        jButton3.setText("Update");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 460, -1, -1));
+
+        CompNameTxtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CompNameTxtFieldActionPerformed(evt);
+            }
+        });
+        add(CompNameTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 296, 129, -1));
+
+        plansTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Plan", "Company", "Monthly Amount", "Plan Validity"
+            }
+        ));
+        jScrollPane1.setViewportView(plansTable);
+
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 108, 560, 161));
+
+        jLabel5.setText("Company name");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(78, 302, -1, -1));
+        add(PlanAmtTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 419, 129, -1));
+
+        deleteBtn.setText("Delete Plan");
+        deleteBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteBtnActionPerformed(evt);
+            }
+        });
+        add(deleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 340, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void PlanValTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlanValTxtFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PlanValTxtFieldActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        populateTable();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        int selectedRowIndex = plansTable.getSelectedRow();
+        int rowIndex = selectedRowIndex;
+
+        if (selectedRowIndex<0){
+            JOptionPane.showMessageDialog(this,"Please Select a row");
+        }
+
+        DefaultTableModel model = (DefaultTableModel) plansTable.getModel();
+        InsurancePlan selectedPlan = (InsurancePlan) model.getValueAt(selectedRowIndex, 0);
+        CompNameTxtField.setText(String.valueOf(selectedPlan.getCompanyName()));
+        PlanNameTxtField.setText(String.valueOf(selectedPlan.getPlanName()));
+        PlanValTxtField.setText(String.valueOf(selectedPlan.getPlanValidity()));
+        PlanAmtTxtField.setText(String.valueOf(selectedPlan.getPremiumAmt()));
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        int selectedRowIndex = plansTable.getSelectedRow();
+        int rowIndex = selectedRowIndex;
+        DefaultTableModel model = (DefaultTableModel) plansTable.getModel();
+        InsurancePlan selectedPlan = (InsurancePlan) model.getValueAt(selectedRowIndex, 0);
+
+        selectedPlan.setCompanyName(CompNameTxtField.getText());
+        selectedPlan.setPlanName(PlanNameTxtField.getText());
+        selectedPlan.setPlanValidity(PlanValTxtField.getText());
+        selectedPlan.setPremiumAmt(PlanAmtTxtField.getText());
+
+        CompNameTxtField.setText("");
+        PlanNameTxtField.setText("");
+        PlanValTxtField.setText("");
+        PlanAmtTxtField.setText("");
+
+        populateTable();
+        JOptionPane.showMessageDialog(this,"Insurance entry updated");
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void CompNameTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CompNameTxtFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CompNameTxtFieldActionPerformed
+
+    private void deleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtnActionPerformed
+        // TODO add your handling code here:
+        int selectedRowIndex = plansTable.getSelectedRow();
+        
+        if (selectedRowIndex<0){
+            JOptionPane.showMessageDialog(this,"Please select a row to delete");
+        }
+        
+        DefaultTableModel model = (DefaultTableModel) plansTable.getModel();
+        //model.getValueAt(selectedRowIndex, 0);
+        InsurancePlan selectedPlan = (InsurancePlan) model.getValueAt(selectedRowIndex, 0);
+        
+        system.getInsPlanDirectory().deleteplan(selectedPlan);
+        
+        JOptionPane.showMessageDialog(this,"Plan deleted");
+        
+        populateTable();
+    }//GEN-LAST:event_deleteBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField CompNameTxtField;
+    private javax.swing.JTextField PlanAmtTxtField;
+    private javax.swing.JTextField PlanNameTxtField;
+    private javax.swing.JTextField PlanValTxtField;
+    private javax.swing.JButton deleteBtn;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable plansTable;
     // End of variables declaration//GEN-END:variables
-}
+
+    private void populateTable() {
+        DefaultTableModel model = (DefaultTableModel) plansTable.getModel();
+        model.setRowCount(0);
+        for(InsurancePlan ip : system.getInsPlanDirectory().getInsPlanList()){
+            Object[] row = new Object[10];
+            row[0] = ip;
+            row[1] = ip.getCompanyName();
+            row[2] = ip.getPremiumAmt();
+            row[3] = ip.getPlanValidity();
+            model.addRow(row); 
+        }
+        }
+    }

@@ -4,7 +4,7 @@
  */
 package HospitalEnterprise;
 
-import CommunityEnterprise.LoginCredentials;
+import ComEnterprise.LoginCredentials;
 import java.util.Date;
 
 /**
@@ -25,7 +25,7 @@ public class Therapist {
     Date dob;
     String gender;
     String specilization;
-    EmergencyContact emergencyContact;
+    //EmergencyContact emergencyContact;
     LoginCredentials loginCredentials;
 
     public String getSsn() {
@@ -132,13 +132,13 @@ public class Therapist {
         this.specilization = specilization;
     }
 
-    public EmergencyContact getEmergencyContact() {
-        return emergencyContact;
-    }
-
-    public void setEmergencyContact(EmergencyContact emergencyContact) {
-        this.emergencyContact = emergencyContact;
-    }
+//    public EmergencyContact getEmergencyContact() {
+//        return emergencyContact;
+//    }
+//
+//    public void setEmergencyContact(EmergencyContact emergencyContact) {
+//        this.emergencyContact = emergencyContact;
+//    }
 
     public LoginCredentials getLoginCredentials() {
         return loginCredentials;
@@ -150,8 +150,10 @@ public class Therapist {
 
     @Override
     public String toString() {
-        return "Therapist{" + "ssn=" + ssn + ", firstName=" + firstName + ", lastName=" + lastName + ", emailId=" + emailId + ", phoneNo=" + phoneNo + ", addressLine1=" + addressLine1 + ", addressLine2=" + addressLine2 + ", community=" + community + ", city=" + city + ", zipCode=" + zipCode + ", dob=" + dob + ", gender=" + gender + ", specilization=" + specilization + ", emergencyContact=" + emergencyContact + ", loginCredentials=" + loginCredentials + '}';
+        return "Therapist{" + "ssn=" + ssn + ", firstName=" + firstName + ", lastName=" + lastName + ", emailId=" + emailId + ", phoneNo=" + phoneNo + ", addressLine1=" + addressLine1 + ", addressLine2=" + addressLine2 + ", community=" + community + ", city=" + city + ", zipCode=" + zipCode + ", dob=" + dob + ", gender=" + gender + ", specilization=" + specilization + ", loginCredentials=" + loginCredentials + '}';
     }
+
+   
     
     
 }

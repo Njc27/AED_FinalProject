@@ -4,6 +4,7 @@
  */
 package HospitalEnterprise;
 
+import ComEnterprise.People;
 import java.util.Date;
 
 /**
@@ -11,9 +12,10 @@ import java.util.Date;
  * @author namithajc
  */
 public class Appointments {
-     String appointmentTime;
+    
+    String appointmentTime;
     Date appointmentDate;
-    Patient patient;
+    People patient;
 
     public String getAppointmentTime() {
         return appointmentTime;
@@ -31,11 +33,11 @@ public class Appointments {
         this.appointmentDate = appointmentDate;
     }
 
-    public Patient getPatient() {
+    public People getPatient() {
         return patient;
     }
 
-    public void setPatient(Patient patient) {
+    public void setPatient(People patient) {
         this.patient = patient;
     }
 
@@ -43,4 +45,6 @@ public class Appointments {
     public String toString() {
         return "Appointments{" + "appointmentTime=" + appointmentTime + ", appointmentDate=" + appointmentDate + ", patient=" + patient + '}';
     }
+    
+    
 }

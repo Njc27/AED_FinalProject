@@ -3,16 +3,42 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/Business/ConfigureASystem.java</file>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/Business/EmergencyEnterprise.java</file>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/UserInterface/Patient/BookAppointmentJPanel.java</file>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/UserInterface/Admin/SystemJPanel.java</file>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/Business/Organization.java</file>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/Business/Email.java</file>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/Business/EmailMain.java</file>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/UserInterface/Doctor/DoctorDashboard.java</file>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/UserInterface/Main/HomePageJFrame.java</file>
-            <file>file:/Users/namithajc/Documents/AED/Final/AED_FinalProjectGit/AED_FinalProject/src/UserInterface/Admin/PeopleJPanel.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/Business/Email.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/UserInterface/EmergencyAdmin/EmergencyAdminJpanel.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/TheBusiness/Insurance/InsurancePlan.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/UserInterface/Patient/PatloginJPanel.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/UserInterface/Insurance/ManageInsurancePlansJPanel.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/CommunityEnterprise/LoginCredentials.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/UserInterface/EmergencyEnterprise/EmergencySoSsJPanel.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/UserInterface/EmergencyAmbulance/EmergencyAmbulanceDriver.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/UserInterface/Admin/SystemJPanel.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/UserInterface/EmergencyAdmin/EmergencyRequestJpanel.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/CommunityEnterprise/PeopleDirectory.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/UserInterface/Patient/BookAppointmentJPanel.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/Business/ConfigureASystem.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/UserInterface/Patient/PatDashnboardJPanel.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/UserInterface/EmergencyEnterprise/EmergencyCallsJPanel.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/UserInterface/Patient/PatientDashboard.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/UserInterface/Main/HomePageJFrame.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/HospitalEnterprise/Patient.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/UserInterface/Insurance/InsuranceAdminJPanel.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/UserInterface/Main/LoginJPanel.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/Business/HospitalEnterprise.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/UserInterface/EmergencyEnterprise/EmergencyDoctorJPanel.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/HospitalEnterprise/PatientDirectory.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/UserInterface/Insurance/ManageCustomersJPanel.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/UserInterface/Patient/PatientRegistrationJPanel.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/Business/EmergencyEnterprise.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/TheBusiness/Insurance/InsurancePlanDirectory.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/UserInterface/BackupUI/SystemAdmin.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/UserInterface/Insurance/AddInsuranceJPanel.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/CommunityEnterprise/People.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/UserInterface/Admin/PeopleJPanel.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/Business/EnterpriseDirectory.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/Business/Enterprise.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/UserInterface/Community/ComAdminJPanel.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/Business/InsuranceEnterprise.java</file>
+            <file>file:/Users/banishmg/Desktop/useless/AED_FinalNamitha/src/Business/Organization.java</file>
         </group>
     </open-files>
 </project-private>

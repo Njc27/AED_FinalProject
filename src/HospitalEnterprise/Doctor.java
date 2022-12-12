@@ -4,164 +4,65 @@
  */
 package HospitalEnterprise;
 
-import CommunityEnterprise.LoginCredentials;
+import ComEnterprise.People;
 import java.util.Date;
+import java.util.HashMap;
 
 /**
  *
  * @author namithajc
  */
 public class Doctor {
-    String ssn;
-    String firstName;
-    String lastName;
-    String emailId;
-    String phoneNo;
-    String addressLine1;
-    String addressLine2;
-    String community;
-    String city;
-    String zipCode;
-    Date dob;
-    String gender;
-    String specilization;
-    EmergencyContact emergencyContact;
-    LoginCredentials loginCredentials;
-    AppointmentsDirectory appointmentCatalouge;
+    People person;
+    private String specialization;
+    private PatientCatalouge patientCatalouge;
+    private AppointmentsCatalouge appointmentCatalouge;
 
-
-    public String getSsn() {
-        return ssn;
+    public Doctor(People person, String specialization, PatientCatalouge patientCatalouge,AppointmentsCatalouge appointmentsCatalouge) {
+        this.person = person;
+        this.specialization = specialization;
+        this.patientCatalouge = patientCatalouge;
+        this.appointmentCatalouge  = appointmentsCatalouge;
     }
 
-    public void setSsn(String ssn) {
-        this.ssn = ssn;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getEmailId() {
-        return emailId;
-    }
-
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
-    }
-
-    public String getPhoneNo() {
-        return phoneNo;
-    }
-
-    public void setPhoneNo(String phoneNo) {
-        this.phoneNo = phoneNo;
-    }
-
-    public String getAddressLine1() {
-        return addressLine1;
-    }
-
-    public void setAddressLine1(String addressLine1) {
-        this.addressLine1 = addressLine1;
-    }
-
-    public String getAddressLine2() {
-        return addressLine2;
-    }
-
-    public void setAddressLine2(String addressLine2) {
-        this.addressLine2 = addressLine2;
-    }
-
-    public String getCommunity() {
-        return community;
-    }
-
-    public void setCommunity(String community) {
-        this.community = community;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getZipCode() {
-        return zipCode;
-    }
-
-    public void setZipCode(String zipCode) {
-        this.zipCode = zipCode;
-    }
-
-    public Date getDob() {
-        return dob;
-    }
-
-    public void setDob(Date dob) {
-        this.dob = dob;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getSpecilization() {
-        return specilization;
-    }
-
-    public void setSpecilization(String specilization) {
-        this.specilization = specilization;
-    }
-
-    public EmergencyContact getEmergencyContact() {
-        return emergencyContact;
-    }
-
-    public void setEmergencyContact(EmergencyContact emergencyContact) {
-        this.emergencyContact = emergencyContact;
-    }
-
-    public LoginCredentials getLoginCredentials() {
-        return loginCredentials;
-    }
-
-    public void setLoginCredentials(LoginCredentials loginCredentials) {
-        this.loginCredentials = loginCredentials;
-    }
-
-    public AppointmentsDirectory getAppointmentCatalouge() {
+    public AppointmentsCatalouge getAppointmentCatalouge() {
         return appointmentCatalouge;
     }
 
-    public void setAppointmentCatalouge(AppointmentsDirectory appointmentCatalouge) {
+    public void setAppointmentCatalouge(AppointmentsCatalouge appointmentCatalouge) {
         this.appointmentCatalouge = appointmentCatalouge;
     }
-    
+
+    public People getPerson() {
+        return person;
+    }
+
+    public void setPerson(People person) {
+        this.person = person;
+    }
+    public String getSpecialization() {
+        return specialization;
+    }
+
+    public void setSpecialization(String specialization) {
+        this.specialization = specialization;
+    }
+    public PatientCatalouge getPatientCatalouge() {
+        return patientCatalouge;
+    }
+
+    public void setPatientCatalouge(PatientCatalouge patientCatalouge) {
+        this.patientCatalouge = patientCatalouge;
+    }
+
+    public Doctor() {
+    }
+
     @Override
     public String toString() {
-        return "Doctor{" + "ssn=" + ssn + ", firstName=" + firstName + ", lastName=" + lastName + ", emailId=" + emailId + ", phoneNo=" + phoneNo + ", addressLine1=" + addressLine1 + ", addressLine2=" + addressLine2 + ", community=" + community + ", city=" + city + ", zipCode=" + zipCode + ", dob=" + dob + ", gender=" + gender + ", specilization=" + specilization + ", emergencyContact=" + emergencyContact + '}';
+        return "Doctor{" + "person=" + person + ", specialization=" + specialization + ", patientCatalouge=" + patientCatalouge + ", appointmentCatalouge=" + appointmentCatalouge + '}';
     }
-    
-    
+
+
+   
 }

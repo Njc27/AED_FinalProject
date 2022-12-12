@@ -4,137 +4,90 @@
  */
 package HospitalEnterprise;
 
-import CommunityEnterprise.Community;
-
 /**
  *
  * @author namithajc
  */
 public class Hospital {
-    String name;
-    //String com;
-//    Community community;
-//    String city;
-    String zipCode;
-    String email;
-    String phone;
-    DoctorDirectory doctorDirectory;
-    TherapistDirectory therapistDirectory;
-    PatientDirectory patientDirectory;
+    private String hospitalName;
+    private String emailId;
+    private String phoneNo;
+    private String AdminId;
+    private DoctorCatalouge doctorCataloug;
+    private PatientCatalouge patientCatalouge;
     
-    public Hospital(){
-         doctorDirectory = new DoctorDirectory();
-         patientDirectory = new PatientDirectory();
+    public Hospital () {
+        doctorCataloug = new DoctorCatalouge();
     }
     
-//    public Hospital(String name, Community community, String city, int zipCode, DoctorDirectory doctorDirectory, PatientDirectory patientDirectory) {
-//        this.name = name;
-//        this.community = community;
-//        this.city = city;
-//        this.zipCode = zipCode;
-//        this.doctorDirectory = doctorDirectory;
-//        this.patientDirectory = patientDirectory;
-//    }
     
-    public Hospital(String name,String com, String city, String zipCode, DoctorDirectory doctorDirectory, PatientDirectory patientDirectory) {
-        this.name = name;
-//        this.com = com;
-//        //this.community = community;
-//        this.city = city;
-        this.zipCode = zipCode;
-        this.doctorDirectory = doctorDirectory;
-        this.patientDirectory = patientDirectory;
+
+    public String getAdminId() {
+        return AdminId;
     }
 
-    public String getName() {
-        return name;
+    public void setAdminId(String AdminId) {
+        this.AdminId = AdminId;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-//
-//    public Community getCommunity() {
-//        return community;
-//    }
-//
-//    public void setCommunity(Community community) {
-//        this.community = community;
-//    }
-//
-//    public String getCity() {
-//        return city;
-//    }
-//
-//    public void setCity(String city) {
-//        this.city = city;
-//    }
-
-    public String getZipCode() {
-        return zipCode;
-    }
-
-    public void setZipCode(String zipCode) {
-        this.zipCode = zipCode;
+    public Hospital(String hospitalName, String emailId, String phoneNo, String AdminId, DoctorCatalouge doctorCataloug, PatientCatalouge patientCatalouge) {
+        this.hospitalName = hospitalName;
+        this.emailId = emailId;
+        this.phoneNo = phoneNo;
+        this.AdminId = AdminId;
+        this.doctorCataloug = doctorCataloug;
+        this.patientCatalouge = patientCatalouge;
     }
 
     
 
-    public String getEmail() {
-        return email;
+    public String getEmailId() {
+        return emailId;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmailId(String emailId) {
+        this.emailId = emailId;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getPhoneNo() {
+        return phoneNo;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-//    public String getCom() {
-//        return com;
-//    }
-//
-//    public void setCom(String com) {
-//        this.com = com;
-//    }ß
-    
-    
-
-    public DoctorDirectory getDoctorDirectory() {
-        return doctorDirectory;
-    }
-
-    public void setDoctorDirectory(DoctorDirectory doctorDirectory) {
-        this.doctorDirectory = doctorDirectory;
-    }
-
-    public PatientDirectory getPatientDirectory() {
-        return patientDirectory;
-    }
-
-    public void setPatientDirectory(PatientDirectory patientDirectory) {
-        this.patientDirectory = patientDirectory;
-    }
-
-    public TherapistDirectory getTherapistDirectory() {
-        return therapistDirectory;
-    }
-
-    public void setTherapistDirectory(TherapistDirectory therapistDirectory) {
-        this.therapistDirectory = therapistDirectory;
+    public void setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
     }
     
-    
-    
-     @Override
+
+    public String getHospitalName() {
+        return hospitalName;
+    }
+
+    public void setHospitalName(String hospitalName) {
+        this.hospitalName = hospitalName;
+    }
+
+    public DoctorCatalouge getDoctorCataloug() {
+        return doctorCataloug;
+    }
+
+    public void setDoctorCataloug(DoctorCatalouge doctorCataloug) {
+        this.doctorCataloug = doctorCataloug;
+    }
+
+    public PatientCatalouge getPatientCatalouge() {
+        return patientCatalouge;
+    }
+
+    public void setPatientCatalouge(PatientCatalouge patientCatalouge) {
+        this.patientCatalouge = patientCatalouge;
+    }
+
+    @Override
     public String toString() {
-        return "Hospital{" + "hospitalName=" + name + ", ZipCode=" + zipCode + ", doctorDirectory=" + doctorDirectory + ", patientDirectory=" + patientDirectory + '}';
+        return "Hospital{" + "hospitalName=" + hospitalName + ", emailId=" + emailId + ", phoneNo=" + phoneNo + ", doctorCataloug=" + doctorCataloug + ", patientCatalouge=" + patientCatalouge + '}';
     }
-     
+
+    
+    
+   
 }

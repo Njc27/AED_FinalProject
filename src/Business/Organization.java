@@ -6,32 +6,66 @@ package Business;
 
 import CommunityEnterprise.CityDirectory;
 import CommunityEnterprise.EventDirectory;
-import HospitalEnterprise.HospitalDirectory;
+//import HospitalEnterprise.HospitalDirectory;
 import CommunityEnterprise.PeopleDirectory;
-import HospitalEnterprise.PatientDirectory;
+//import ComEnterprise.PeopleCatalouge;
+import HospitalEnterprise.PatientCatalouge;
+import TheBusiness.EmergencyAdmin.EmergencySoSDirectory;
+import TheBusiness.Insurance.InsurancePlanDirectory;
 
 /**
  *
  * @author namithajc
  */
 public class Organization {
-    CityDirectory cityDirectory;
+
+    public static Organization system;
+    //CityDirectory cityDirectory;
     PeopleDirectory peopleDirectory;
-    PatientDirectory patientDirectory;
-    EventDirectory eventDirectory;
+//    PatientCatalouge patientDirectory;
+//    EventDirectory eventDirectory;
+    InsurancePlanDirectory insPlanDirectory;
+    EmergencySoSDirectory EmgSoSList;
+    GoogleMapsLocation mapsLocation;
 
     public Organization() {
-        cityDirectory = new CityDirectory();
-    }
-   
-
-    public CityDirectory getCityDirectory() {
-        return cityDirectory;
+//        cityDirectory = new CityDirectory();
+        insPlanDirectory = new InsurancePlanDirectory();
+        EmgSoSList = new EmergencySoSDirectory();
+        mapsLocation = new GoogleMapsLocation();
     }
 
-    public void setCityDirectory(CityDirectory cityDirectory) {
-        this.cityDirectory = cityDirectory;
+    public GoogleMapsLocation getMapsLocation() {
+        return mapsLocation;
     }
+
+    public void setMapsLocation(GoogleMapsLocation mapsLocation) {
+        this.mapsLocation = mapsLocation;
+    }
+
+    public InsurancePlanDirectory getInsPlanDirectory() {
+        return insPlanDirectory;
+    }
+
+    public EmergencySoSDirectory getEmgSoSList() {
+        return EmgSoSList;
+    }
+
+    public void setEmgSoSList(EmergencySoSDirectory EmgSoSList) {
+        this.EmgSoSList = EmgSoSList;
+    }
+
+    public void setInsPlanDirectory(InsurancePlanDirectory insPlanDirectory) {
+        this.insPlanDirectory = insPlanDirectory;
+    }
+//
+//    public CityDirectory getCityDirectory() {
+//        return cityDirectory;
+//    }
+//
+//    public void setCityDirectory(CityDirectory cityDirectory) {
+//        this.cityDirectory = cityDirectory;
+//    }
 
     public PeopleDirectory getPeopleDirectory() {
         return peopleDirectory;
@@ -41,34 +75,35 @@ public class Organization {
         this.peopleDirectory = peopleDirectory;
     }
 
-    
+//    public PatientCatalouge getPatientDirectory() {
+//        return patientDirectory;
+//    }
 
-    public PatientDirectory getPatientDirectory() {
-        return patientDirectory;
+//    public void setPatientDirectory(PatientCatalouge patientDirectory) {
+//        this.patientDirectory = patientDirectory;
+//    }
+//
+//    public EventDirectory getEventDirectory() {
+//        return eventDirectory;
+//    }
+//
+//    public void setEventDirectory(EventDirectory eventdirectory) {
+//        this.eventDirectory = eventdirectory;
+//    }
+
+    public static Organization getInstance() {
+        if (system == null) {
+            system = new Organization();
+            return system;
+        }
+        return system;
     }
 
-    public void setPatientDirectory(PatientDirectory patientDirectory) {
-        this.patientDirectory = patientDirectory;
-    }
-
-    public EventDirectory getEventDirectory() {
-        return eventDirectory;
-    }
-
-    public void setEventDirectory(EventDirectory eventdirectory) {
-        this.eventDirectory = eventdirectory;
-    }
-    
-    
     @Override
     public String toString() {
-        return "Organization{" + "commDirectory=" + cityDirectory + ", hospDirectory=" + ", peopleDirectory=" + peopleDirectory + '}';
+        return "Organization{" + "peopleDirectory=" + peopleDirectory + ", insPlanDirectory=" + insPlanDirectory + ", EmgSoSList=" + EmgSoSList + ", mapsLocation=" + mapsLocation + '}';
     }
-    
 
-   
-    
-    
-    
-    
+
+
 }
